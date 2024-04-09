@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const user = true;
+  const user = false;
   const navList = (
     <>
       <li className="hover:bg-green-500 hover:text-white rounded-lg ">
@@ -53,13 +53,12 @@ const Navbar = () => {
         <div className="dropdown dropdown-end">
           <label
             tabIndex={0}
-            className="btn btn-ghost btn-circle avatar hover:bg-green-500 min-h-12 h-12 w-12">
-            <div className="w-10 rounded-full">
+            className="btn btn-ghost btn-circle avatar hover:bg-green-500 min-h-12 h-12 w-12 mt-2">
+            <div className="w-12 rounded-full">
               <img
                 className=""
                 src={
-                  user?.photoURL ||
-                  "https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-default-male-avatar-png-image_2811083.jpg"
+                  user?.photoURL || "https://avatar.iran.liara.run/public/15"
                 }
               />
             </div>
@@ -78,11 +77,11 @@ const Navbar = () => {
                   Logout
                 </button>
               ) : (
-                <a to="/login">
+                <Link to="/login">
                   <button className="btn btn-ghost hover:bg-green-500 hover:text-white text-xl font-semibold min-h-8 h-8 w-full">
                     Login
                   </button>
-                </a>
+                </Link>
               )}
             </div>
           </ul>
@@ -94,11 +93,11 @@ const Navbar = () => {
               Logout
             </button>
           ) : (
-            <a to="/login">
+            <Link to="/login">
               <button className="btn btn-ghost hover:bg-green-500 hover:text-white text-xl font-semibold min-h-10 h-10">
                 Login
               </button>
-            </a>
+            </Link>
           )}
         </div>
       </div>
