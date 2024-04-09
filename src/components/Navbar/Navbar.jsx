@@ -1,5 +1,5 @@
 const Navbar = () => {
-  const user = false;
+  const user = true;
   const navList = (
     <>
       {" "}
@@ -36,7 +36,9 @@ const Navbar = () => {
             {navList}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl ">LUXINESY</a>
+        <a className="btn btn-ghost text-xl hover:bg-green-500 hover:text-white min-h-10 h-10">
+          LUXINESY
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navList}</ul>
@@ -64,13 +66,17 @@ const Navbar = () => {
                 </button>
               </li>
               <li>
-                <button className="btn btn-sm  btn-ghost">Logout</button>
+                <button className="btn btn-ghost hover:bg-green-500 hover:text-white min-h-10 h-10">
+                  Logout
+                </button>
               </li>
             </ul>
           </div>
         ) : (
           <a to="/login">
-            <button className="btn btn-sm  btn-ghost">Login</button>
+            <button className="btn btn-ghost hover:bg-green-500 hover:text-white min-h-10 h-10">
+              Login
+            </button>
           </a>
         )}
       </div>
