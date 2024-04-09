@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
-    <div className="container mx-auto font-spartan">
+    <div className=" font-spartan">
       <Navbar />
       <Outlet />
       <Footer />

@@ -2,7 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsEnvelope, BsFillTelephoneFill } from "react-icons/bs";
 const Footer = () => {
   return (
-    <footer className="p-10 bg-[#0F172A] text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 justify-between ">
+    <footer className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 justify-between rounded">
       <aside className="lg:col-span-2 lg:pr-4">
         <div className="flex items-center">
           <img
