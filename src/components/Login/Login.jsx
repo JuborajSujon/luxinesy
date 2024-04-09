@@ -4,8 +4,8 @@ import { BsGithub } from "react-icons/bs";
 
 const Login = () => {
   return (
-    <section className="py-10 max-w-[1540px] mx-auto flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-green-200 z-2"></div>
+    <section className="py-20 max-w-[1540px] mx-auto flex items-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2"></div>
       <div className="container mx-auto relative z-3">
         <div className="flex justify-center">
           <div className="max-w-[400px] w-full m-auto p-6 bg-white shadow-md rounded-md">
@@ -85,7 +85,7 @@ const Login = () => {
                 Don't have an account ?
               </span>{" "}
               <Link
-                to={"/signup"}
+                to={"/register"}
                 className="text-black dark:text-white font-bold">
                 Register
               </Link>
