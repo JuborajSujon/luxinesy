@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -19,12 +19,17 @@ const Navbar = () => {
   const handleLogin = () => {
     setUser(true);
   };
-  console.log(user);
+
   const navList = (
     <>
       <li className="hover:bg-green-500 hover:text-white rounded-lg ">
         <NavLink to="/">Home</NavLink>
       </li>
+      {user && (
+        <li className="hover:bg-green-500 hover:text-white rounded-lg">
+          <NavLink to="/aboutus">About Us</NavLink>
+        </li>
+      )}
       <li className="hover:bg-green-500 hover:text-white rounded-lg">
         <NavLink to="/profile">Update Profile</NavLink>
       </li>
@@ -91,7 +96,7 @@ const Navbar = () => {
 
               <button
                 onClick={handleLogout}
-                className="btn btn-ghost hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10 mt-3">
+                className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10 mt-3">
                 Logout
               </button>
             </div>
@@ -112,7 +117,7 @@ const Navbar = () => {
             <Link to="/login">
               <button
                 onClick={handleLogin}
-                className="btn btn-ghost hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10">
+                className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10">
                 Login
               </button>
             </Link>

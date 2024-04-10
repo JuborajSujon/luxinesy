@@ -4,6 +4,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Terms from "../components/Terms/Terms";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms />,
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs />,
       },
     ],
   },
