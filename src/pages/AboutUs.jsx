@@ -1,10 +1,11 @@
 import Progress from "../components/Progress/Progress";
 import HowItWork from "../components/HowItWork/HowItWork";
 import Transparency from "../components/Transparency/Transparency";
+import Container from "../components/Container/Container";
 
 const AboutUs = () => {
   return (
-    <div className="max-w-[1540px] mx-auto">
+    <Container>
       <section className="relative w-full py-20 md:py-28 lg:py-36 bg-[url('https://i.ibb.co/VqzMTDv/slider2.jpg')] bg-no-repeat bg-center bg-cover rounded-none">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="container mx-auto relative">
@@ -25,7 +26,7 @@ const AboutUs = () => {
 
       {/* Progress */}
       <Progress />
-    </div>
+    </Container>
   );
 };
 

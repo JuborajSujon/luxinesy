@@ -1,17 +1,14 @@
 import { BsArrowRight } from "react-icons/bs";
+import Container from "../Container/Container";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import Qna from "./../Qna/Qna";
 const Terms = () => {
   return (
-    <div className="max-w-[1540px] mx-auto">
-      <section className="relative w-full py-20 md:py-28 lg:py-36 bg-[url('https://i.ibb.co/t341xj7/slider3.jpg')] bg-no-repeat bg-center bg-cover rounded-none">
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-        <div className="container mx-auto relative">
-          <div className="grid grid-cols-1 text-center mt-10">
-            <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              Terms & Services
-            </h3>
-          </div>
-        </div>
-      </section>
+    <Container>
+      <SectionHeader
+        bgURL="https://i.ibb.co/t341xj7/slider3.jpg"
+        title="Terms & Services"
+      />
 
       <section className="relative lg:py-24 py-16">
         <div className="container mx-auto px-4 relative">
@@ -139,53 +136,8 @@ const Terms = () => {
                   Users Question & Answer :
                 </h5>
 
-                <div className="space-y-2 mt-3">
-                  <div className="collapse collapse-arrow border shadow-sm rounded-md">
-                    <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium text-green-500">
-                      How does it work ?
-                    </div>
-                    <div className="collapse-content">
-                      <p>
-                        Luxury real estate operates similarly to the broader
-                        real estate market but with a focus on high-end
-                        properties that offer exceptional quality, exclusivity,
-                        and amenities.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="collapse collapse-arrow border shadow-sm rounded-md">
-                    <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium text-green-500">
-                      Do I need a designer to use Luxinesy ?
-                    </div>
-                    <div className="collapse-content">
-                      <p>
-                        Luxinesy is a fictional name, and I assume you're
-                        referring to a platform or service related to luxury
-                        real estate. Whether you need a designer to use such a
-                        platform depends on its features and your specific needs
-                      </p>
-                    </div>
-                  </div>
-                  <div className="collapse collapse-arrow border shadow-sm rounded-md">
-                    <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium text-green-500">
-                      What happens when I receive an order ?
-                    </div>
-                    <div className="collapse-content">
-                      <p>
-                        When I receive an order in a business context,
-                        regardless of the industry, several standard processes
-                        typically occur. Here's a general overview of what
-                        happens:Order Confirmation, Processing, Inventory
-                        Management, Delivery, Payment Processing, Order
-                        Fulfillment Confirmation, Customer Support, Feedback
-                        Collection etc.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                {/* FAQ */}
+                <Qna />
 
                 <div className="mt-6">
                   <a className="btn bg-green-600 hover:bg-green-700 text-white rounded-md">
@@ -200,7 +152,7 @@ const Terms = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };
 
