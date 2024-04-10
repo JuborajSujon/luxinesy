@@ -5,6 +5,7 @@ import Container from "../components/Container/Container";
 
 import TeamMember from "../components/TeamMember/TeamMember";
 import ClientReview from "../components/ClientReview/ClientReview";
+import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 
 const AboutUs = () => {
   return (
@@ -37,6 +38,9 @@ const AboutUs = () => {
 
         {/* Client Review */}
         <ClientReview />
+
+        {/* Have Question ? Get in Touch */}
+        <HaveQuestion />
       </section>
     </Container>
   );

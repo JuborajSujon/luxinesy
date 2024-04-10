@@ -26,7 +26,7 @@ const ClientReview = () => {
             spaceBetween={50}
             slidesPerView={1}
             navigation={{}}
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
               // when window width is >= 640px
               640: {
@@ -38,13 +38,10 @@ const ClientReview = () => {
                 width: 768,
                 slidesPerView: 2,
               },
-              1024: {
-                width: 1024,
+
+              1540: {
+                width: 1540,
                 slidesPerView: 3,
-              },
-              1280: {
-                width: 1280,
-                slidesPerView: 4,
               },
             }}>
             <SwiperSlide>

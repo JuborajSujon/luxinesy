@@ -33,6 +33,9 @@ const Navbar = () => {
       <li className="hover:bg-green-500 hover:text-white rounded-lg">
         <NavLink to="/profile">Update Profile</NavLink>
       </li>
+      <li className="hover:bg-green-500 hover:text-white rounded-lg">
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
     </>
   );
   return (
