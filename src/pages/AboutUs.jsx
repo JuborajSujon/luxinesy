@@ -3,8 +3,9 @@ import HowItWork from "../components/HowItWork/HowItWork";
 import Transparency from "../components/Transparency/Transparency";
 import Container from "../components/Container/Container";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+
 import TeamMember from "../components/TeamMember/TeamMember";
+import ClientReview from "../components/ClientReview/ClientReview";
 
 const AboutUs = () => {
   return (
@@ -27,6 +28,9 @@ const AboutUs = () => {
       <section className="relative lg:py-24 py-16">
         {/* Team Member */}
         <TeamMember />
+
+        {/* Client Review */}
+        <ClientReview />
       </section>
     </Container>
   );
