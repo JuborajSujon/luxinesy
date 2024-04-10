@@ -3,6 +3,7 @@ import Root from "../Layout/Root/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import Terms from "../components/Terms/Terms";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+
+      {
+        path: "/terms",
+        element: <Terms />,
       },
     ],
   },
