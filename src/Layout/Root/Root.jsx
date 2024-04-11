@@ -6,10 +6,12 @@ import ThemeController from "../../components/ThemeController/ThemeController";
 const Root = () => {
   return (
     <div className="font-spartan">
-      <div className="h-[cal(100vh-76px)]">
+      <div className="h-16">
         <Navbar />
       </div>
-      <Outlet />
+      <div className="min-h-[calc(100vh-76px)]">
+        <Outlet />
+      </div>
       <ThemeController />
       <Footer />
     </div>

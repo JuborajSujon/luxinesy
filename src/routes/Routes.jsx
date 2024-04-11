@@ -7,7 +7,7 @@ import Terms from "../components/Terms/Terms";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import BlogDetails from "../pages/BlogDetails";
-import SingleEstate from "../components/SingleEstate/SingleEstate";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <BlogDetails />,
+        element: <Home />,
       },
       {
         path: "/profile",
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/p",
-        element: <SingleEstate />,
+        path: "/blogdetails",
+        element: <BlogDetails />,
       },
     ],
   },

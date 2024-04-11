@@ -18,7 +18,7 @@ const ThemeController = () => {
   };
 
   return (
-    <div className="fixed top-1/4  z-3">
+    <div className="fixed top-1/4  z-50">
       <span className="relative inline-block rotate-90">
         <label className="cursor-pointer grid place-items-center">
           <input
