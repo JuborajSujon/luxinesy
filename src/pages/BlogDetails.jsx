@@ -173,7 +173,7 @@ const BlogDetails = () => {
                   referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
 
-              <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-300 mx-2 hidden md:block">
+              <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-200 mx-2 hidden md:block">
                 <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
                 <form className="mt-8">

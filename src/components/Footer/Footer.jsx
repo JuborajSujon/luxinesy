@@ -1,8 +1,10 @@
-import { CiLocationOn } from "react-icons/ci";
-import { BsEnvelope, BsFillTelephoneFill } from "react-icons/bs";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitterX, BsLinkedin, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -103,7 +105,7 @@ const Footer = () => {
         <div className="space-y-2">
           <h6 className=" text-whitet text-lg font-bold ">Contact Details</h6>
           <div className="flex gap-2">
-            <CiLocationOn className="text-green-500" size={20} />
+            <FaLocationDot className="text-green-500 font-bold" size={20} />
             <div className="text-base">
               <p>
                 C/54 Northwest <br /> Freeway, <br />
@@ -116,7 +118,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-2">
-            <BsEnvelope className="text-green-500" size={20} />
+            <MdEmail className="text-green-500" size={20} />
             <p>contact@example.com</p>
           </div>
           <div className="flex gap-2">
@@ -133,36 +135,48 @@ const Footer = () => {
           <p className="mb-0 text-gray-300 flex items-center gap-1">
             © {new Date().getFullYear()} Luxinesy. Design with{" "}
             <AiFillHeart className="mdi mdi-heart text-red-600" /> by{" "}
-            <a
-              href="https://github.com/JuborajSujon"
+            <Link
+              to="https://github.com/JuborajSujon"
               target="_blank"
               className="text-reset">
               Juboraj Sujon
-            </a>
+            </Link>
             .
           </p>
         </div>
 
         <ul className="flex justify-end items-center gap-3 ">
           <li className="inline cursor-pointer">
-            <a target="_blank" className="text-blue-500">
+            <Link
+              to="https://www.facebook.com/"
+              target="_blank"
+              className="text-blue-500">
               <FaFacebookF size={20} />
-            </a>
+            </Link>
           </li>
           <li className="inline cursor-pointer">
-            <a target="_blank" className="text-white">
+            <Link
+              to="https://twitter.com/"
+              target="_blank"
+              className="text-white">
               <BsTwitterX size={20} />
-            </a>
+            </Link>
           </li>
           <li className="inline cursor-pointer">
-            <a target="_blank" className="text-blue-600">
+            <Link
+              to="https://www.linkedin.com/"
+              target="_blank"
+              className="text-blue-600">
               <BsLinkedin size={20} />
-            </a>
+            </Link>
           </li>
           <li className="inline cursor-pointer">
-            <a target="_blank" className="text-red-500">
+            <Link
+              to="https://www.youtube.com/"
+              target="_blank"
+              className="text-red-500">
               <BsYoutube size={28} />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
