@@ -27,7 +27,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2">
+              className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2 hover:bg-transparent hover:text-green-600 hover:border-green-600">
               Subscribe
             </button>
           </form>
