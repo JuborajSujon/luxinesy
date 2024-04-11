@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { FiCamera } from "react-icons/fi";
-import { BsArrowsFullscreen } from "react-icons/bs";
-import { FaBed, FaBath, FaUser, FaComments } from "react-icons/fa";
+import {
+  FaBed,
+  FaBath,
+  FaUser,
+  FaComments,
+  FaCompressArrowsAlt,
+} from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import Container from "../components/Container/Container";
@@ -124,7 +129,7 @@ const BlogDetails = () => {
 
               <ul className="py-6 flex items-center list-none">
                 <li className="flex items-center lg:me-6 me-4">
-                  <BsArrowsFullscreen className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
+                  <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
                   <span className="lg:text-xl">8000sqf</span>
                 </li>
 
