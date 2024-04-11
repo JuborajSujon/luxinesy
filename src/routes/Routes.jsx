@@ -7,6 +7,7 @@ import Terms from "../components/Terms/Terms";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import BlogDetails from "../pages/BlogDetails";
+import SingleEstate from "../components/SingleEstate/SingleEstate";
 
 const router = createBrowserRouter([
   {
@@ -46,8 +47,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/blog",
-        element: <ErrorPage />,
+        path: "/p",
+        element: <SingleEstate />,
       },
     ],
   },
