@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
 const TeamMember = () => {
   return (
@@ -19,27 +21,30 @@ const TeamMember = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
 
-              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out space-x-1">
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="facebook" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://facebook.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaFacebookF size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="instagram" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.instagram.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaInstagram size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="linkedin" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.linkedin.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaLinkedinIn size={20} />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -65,27 +70,30 @@ const TeamMember = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
 
-              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out space-x-1">
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="facebook" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://facebook.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaFacebookF size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="instagram" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.instagram.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaInstagram size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="linkedin" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.linkedin.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaLinkedinIn size={20} />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -111,27 +119,30 @@ const TeamMember = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
 
-              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out space-x-1">
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="facebook" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://facebook.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaFacebookF size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="instagram" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.instagram.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaInstagram size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="linkedin" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.linkedin.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaLinkedinIn size={20} />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -157,27 +168,30 @@ const TeamMember = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
 
-              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+              <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out space-x-1">
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="facebook" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://facebook.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaFacebookF size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="instagram" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.instagram.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaInstagram size={20} />
+                  </Link>
                 </li>
                 <li className="inline">
-                  <a
-                    href="#"
-                    className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
-                    <i data-feather="linkedin" className="h-4 w-4"></i>
-                  </a>
+                  <Link
+                    to="https://www.linkedin.com/"
+                    target="_blank"
+                    className="btn btn-sm px-1 rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white">
+                    <FaLinkedinIn size={20} />
+                  </Link>
                 </li>
               </ul>
             </div>
