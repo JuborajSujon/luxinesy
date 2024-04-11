@@ -218,10 +218,10 @@ const BlogDetails = () => {
                           Your Comment:
                         </label>
                         <div className="form-icon relative mt-2">
-                          <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600" />
+                          <FaComments className="w-5 h-5 absolute top-2 start-4 text-green-600" />
                           <textarea
                             id="comments"
-                            className="ps-11 h-28 w-full"
+                            className="ps-11 h-28 w-full border-2 border-slate-200 rounded-md py-2"
                             placeholder="Message :"></textarea>
                         </div>
                       </div>
