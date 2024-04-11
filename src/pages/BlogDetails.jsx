@@ -18,7 +18,7 @@ const BlogDetails = () => {
         <div className="container-fluid">
           <div className="md:flex mt-4">
             <div className="lg:w-1/2 md:w-1/2 p-1">
-              <div className="group relative overflow-hidden w-full h-full bg-red-500">
+              <div className="group relative overflow-hidden w-full h-full ">
                 <img
                   className="w-full h-full object-cover"
                   src="https://i.ibb.co/vQHGNXX/Dubai-Marina-1.webp"

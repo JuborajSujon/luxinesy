@@ -7,7 +7,7 @@ const ThemeController = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const currentTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", currentTheme);
+    document.querySelector("html").setAttribute("class", currentTheme);
   }, [theme]);
   const toggleTheme = (e) => {
     if (e.target.checked) {

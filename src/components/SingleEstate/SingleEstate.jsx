@@ -1,6 +1,6 @@
 const SingleEstate = () => {
   return (
-    <div className="py-24">
+    <div className="tiny-slide">
       <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 m-3">
         <div className="relative">
           <img src="assets/images/property/5.jpg" alt="" />
