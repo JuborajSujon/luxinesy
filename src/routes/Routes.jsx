@@ -6,6 +6,7 @@ import Register from "../components/Register/Register";
 import Terms from "../components/Terms/Terms";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
+import BlogDetails from "../pages/BlogDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Home</div>,
+        element: <BlogDetails />,
       },
       {
         path: "/profile",
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+
+      {
+        path: "/blog",
+        element: <ErrorPage />,
       },
     ],
   },

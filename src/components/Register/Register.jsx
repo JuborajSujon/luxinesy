@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 const Register = () => {
+  const [password, setPassword] = useState("");
   return (
     <section className="py-16 sm:pt-20 sm:pb-36 max-w-[1540px] mx-auto flex items-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2"></div>
@@ -54,12 +57,27 @@ const Register = () => {
                   <label className="font-medium" htmlFor="LoginPassword">
                     Password:
                   </label>
-                  <input
-                    id="LoginPassword"
-                    type="password"
-                    className="border border-slate-300 p-2 rounded-md mt-3"
-                    placeholder="Enter Your Password"
-                  />
+                  <div className="relative">
+                    <input
+                      id="LoginPassword"
+                      type={password ? "" : "password"}
+                      className="w-full border border-slate-300 p-2 rounded-md mt-3"
+                      placeholder="Enter Your Password"
+                    />
+                    <div className="absolute mt-2 top-1/2 -translate-y-1/2 right-2">
+                      {password ? (
+                        <BsEyeSlash
+                          onClick={() => setPassword(!password)}
+                          size={20}
+                        />
+                      ) : (
+                        <BsEye
+                          onClick={() => setPassword(!password)}
+                          size={20}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex items-center mb-4">

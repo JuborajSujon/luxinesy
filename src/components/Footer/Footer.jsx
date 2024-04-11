@@ -3,6 +3,7 @@ import { BsEnvelope, BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitterX, BsLinkedin, BsYoutube } from "react-icons/bs";
+
 const Footer = () => {
   return (
     <footer className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white relative">
@@ -131,7 +132,7 @@ const Footer = () => {
         <div className="md:text-start text-center">
           <p className="mb-0 text-gray-300 flex items-center gap-1">
             © {new Date().getFullYear()} Luxinesy. Design with{" "}
-            <AiFillHeart class="mdi mdi-heart text-red-600" /> by{" "}
+            <AiFillHeart className="mdi mdi-heart text-red-600" /> by{" "}
             <a
               href="https://github.com/JuborajSujon"
               target="_blank"
@@ -143,22 +144,22 @@ const Footer = () => {
         </div>
 
         <ul className="flex justify-end items-center gap-3 ">
-          <li className="inline">
+          <li className="inline cursor-pointer">
             <a target="_blank" className="text-blue-500">
               <FaFacebookF size={20} />
             </a>
           </li>
-          <li className="inline">
+          <li className="inline cursor-pointer">
             <a target="_blank" className="text-white">
               <BsTwitterX size={20} />
             </a>
           </li>
-          <li className="inline">
+          <li className="inline cursor-pointer">
             <a target="_blank" className="text-blue-600">
               <BsLinkedin size={20} />
             </a>
           </li>
-          <li className="inline">
+          <li className="inline cursor-pointer">
             <a target="_blank" className="text-red-500">
               <BsYoutube size={28} />
             </a>

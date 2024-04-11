@@ -5,7 +5,9 @@ import { Outlet } from "react-router-dom";
 const Root = () => {
   return (
     <div className="font-spartan">
-      <Navbar />
+      <div className="h-[cal(100vh-76px)]">
+        <Navbar />
+      </div>
       <Outlet />
       <Footer />
     </div>
