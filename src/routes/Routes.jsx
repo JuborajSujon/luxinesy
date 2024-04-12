@@ -8,6 +8,7 @@ import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import BlogDetails from "../pages/BlogDetails";
 import Home from "../pages/Home";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <div>Profile</div>,
+        element: <UpdateProfile />,
       },
       {
         path: "/login",

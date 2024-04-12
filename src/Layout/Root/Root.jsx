@@ -9,7 +9,7 @@ const Root = () => {
       <div className="h-16">
         <Navbar />
       </div>
-      <div className="min-h-[calc(100vh-76px)]">
+      <div className="min-h-[calc(100vh-76px)] mt-2">
         <Outlet />
       </div>
       <ThemeController />

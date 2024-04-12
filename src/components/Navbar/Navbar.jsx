@@ -25,17 +25,19 @@ const Navbar = () => {
       <li className="hover:bg-green-500 hover:text-white rounded-lg ">
         <NavLink to="/">Home</NavLink>
       </li>
-      {user && (
-        <li className="hover:bg-green-500 hover:text-white rounded-lg">
-          <NavLink to="/aboutus">About Us</NavLink>
-        </li>
-      )}
-      <li className="hover:bg-green-500 hover:text-white rounded-lg">
-        <NavLink to="/profile">Update Profile</NavLink>
-      </li>
       <li className="hover:bg-green-500 hover:text-white rounded-lg">
         <NavLink to="/contact">Contact</NavLink>
       </li>
+      {user && (
+        <>
+          <li className="hover:bg-green-500 hover:text-white rounded-lg">
+            <NavLink to="/aboutus">About Us</NavLink>
+          </li>
+          <li className="hover:bg-green-500 hover:text-white rounded-lg">
+            <NavLink to="/profile">Update Profile</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -90,8 +92,7 @@ const Navbar = () => {
                   <img
                     className=""
                     src={
-                      user?.photoURL ||
-                      "https://avatar.iran.liara.run/public/15"
+                      user?.photoURL || "https://i.ibb.co/Jn1jJHN/avater.png"
                     }
                   />
                 </div>
