@@ -50,11 +50,11 @@ const TeamMember = () => {
             </div>
 
             <div className="content mt-3">
-              <a
-                href="#"
-                className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
+              <Link
+                to=""
+                className="text-xl dark:text-slate-300 font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
                 Jack John
-              </a>
+              </Link>
               <p className="text-slate-400">CEO</p>
             </div>
           </div>
@@ -99,11 +99,11 @@ const TeamMember = () => {
             </div>
 
             <div className="content mt-3">
-              <a
-                href="#"
-                className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
+              <Link
+                to=""
+                className="text-xl dark:text-slate-300 font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
                 Krista John
-              </a>
+              </Link>
               <p className="text-slate-400">COO</p>
             </div>
           </div>
@@ -148,11 +148,11 @@ const TeamMember = () => {
             </div>
 
             <div className="content mt-3">
-              <a
-                href="#"
-                className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
+              <Link
+                to=""
+                className="text-xl dark:text-slate-300 font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
                 Roger Jackson
-              </a>
+              </Link>
               <p className="text-slate-400">OM Marketing</p>
             </div>
           </div>
@@ -197,11 +197,11 @@ const TeamMember = () => {
             </div>
 
             <div className="content mt-3">
-              <a
-                href="#"
-                className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">
+              <Link
+                to=""
+                className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out dark:text-slate-200">
                 Johnny English
-              </a>
+              </Link>
               <p className="text-slate-400">Admin</p>
             </div>
           </div>

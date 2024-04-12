@@ -16,52 +16,62 @@ const Register = () => {
                 alt=""
               />
             </Link>
-            <h5 className="my-4 text-xl font-semibold">Register</h5>
+            <h5 className="my-4 text-xl text-slate-700 dark:text-slate-900 font-semibold">
+              Register
+            </h5>
             <form className="text-start">
               <div className="grid grid-cols-1">
                 <div className="mb-3 flex flex-col">
-                  <label className="font-medium" htmlFor="fullName">
+                  <label
+                    className="font-medium text-slate-500 dark:text-slate-900"
+                    htmlFor="fullName">
                     Full Name
                   </label>
                   <input
                     id="fullName"
                     type="text"
-                    className="border border-slate-300 p-2 rounded-md mt-3"
+                    className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                     placeholder="Enter Your Full Name"
                   />
                 </div>
                 <div className="mb-3 flex flex-col">
-                  <label className="font-medium" htmlFor="photo">
+                  <label
+                    className="font-medium text-slate-500 dark:text-slate-900"
+                    htmlFor="photo">
                     Photo URL
                   </label>
                   <input
                     id="photo"
                     type="text"
-                    className="border border-slate-300 p-2 rounded-md mt-3"
+                    className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                     placeholder="Enter Your Photo URL"
                   />
                 </div>
                 <div className="mb-3 flex flex-col">
-                  <label className="font-medium" htmlFor="LoginEmail">
+                  <label
+                    className="font-medium text-slate-500 dark:text-slate-900"
+                    htmlFor="LoginEmail ">
                     Email Address:
                   </label>
                   <input
                     id="LoginEmail"
                     type="email"
-                    className="border border-slate-300 p-2 rounded-md mt-3"
+                    className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                     placeholder="name@example.com"
                   />
                 </div>
 
                 <div className="mb-4 flex flex-col">
-                  <label className="font-medium" htmlFor="LoginPassword">
+                  <label
+                    className="font-medium text-slate-500 dark:text-slate-900"
+                    htmlFor="LoginPassword">
                     Password:
                   </label>
                   <div className="relative">
                     <input
                       id="LoginPassword"
                       type={password ? "" : "password"}
-                      className="w-full border border-slate-300 p-2 rounded-md mt-3"
+                      className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                       placeholder="Enter Your Password"
                     />
                     <div className="absolute mt-2 top-1/2 -translate-y-1/2 right-2">
@@ -110,7 +120,7 @@ const Register = () => {
                 </span>{" "}
                 <Link
                   to={"/login"}
-                  className="text-black dark:text-white font-bold">
+                  className="text-slate-500 dark:text-slate-900 font-bold">
                   Login
                 </Link>
               </div>

@@ -10,12 +10,12 @@ const Footer = () => {
   return (
     <footer className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white relative">
       {/* Newsletter */}
-      <div className="bg-white w-[80%] mx-auto p-6 border-2 border-slate-300 rounded-md absolute -top-20 left-1/2 -translate-x-1/2 sm:flex flex-col items-center lg:flex-row lg:justify-between gap-3 lg:gap-6 hidden">
+      <div className="bg-white w-[80%] mx-auto p-6 border  rounded-md absolute -top-20 left-1/2 -translate-x-1/2 sm:flex flex-col items-center lg:flex-row lg:justify-between gap-3 lg:gap-6 hidden dark:bg-slate-900">
         <div className="text-center md:text-left">
-          <h3 className="md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black">
+          <h3 className="md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-slate-900 dark:text-slate-300">
             Subscribe to Newsletter!
           </h3>
-          <p className="text-slate-400">
+          <p className="text-slate-400 dark:text-slate-300">
             Subscribe to get latest updates and information.
           </p>
         </div>
@@ -24,12 +24,12 @@ const Footer = () => {
           <form className="relative text-center space-y-2 sm:space-y-0">
             <input
               type="email"
-              className=" bg-white shadow border-2 border-slate-400 w-full p-3 rounded-full"
+              className=" bg-white shadow-md border-2  w-full p-3 rounded-full"
               placeholder="Enter your email"
             />
             <button
               type="submit"
-              className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2 hover:bg-transparent hover:text-green-600 hover:border-green-600">
+              className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2 hover:bg-transparent hover:text-green-600 hover:border-green-600 border-no">
               Subscribe
             </button>
           </form>

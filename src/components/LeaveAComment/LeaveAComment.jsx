@@ -4,13 +4,17 @@ import { MdEmail } from "react-icons/md";
 const LeaveAComment = () => {
   return (
     <div className="p-6 rounded-md shadow-md mt-16 border-2 bg-white mx-2">
-      <h5 className="text-xl font-semibold">Leave A Comment:</h5>
+      <h5 className="text-xl dark:text-slate-900 font-semibold">
+        Leave A Comment:
+      </h5>
 
       <form className="mt-8">
         <div className="grid lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-6 mb-5">
             <div className="text-start">
-              <label htmlFor="name" className="font-semibold">
+              <label
+                htmlFor="name"
+                className="font-semibold dark:text-slate-900">
                 Your Name:
               </label>
               <div className="relative mt-2">
@@ -18,7 +22,7 @@ const LeaveAComment = () => {
                 <input
                   type="text"
                   id="name"
-                  className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                  className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 "
                 />
               </div>
             </div>
@@ -26,7 +30,9 @@ const LeaveAComment = () => {
 
           <div className="lg:col-span-6 mb-5">
             <div className="text-start">
-              <label htmlFor="email" className="font-semibold">
+              <label
+                htmlFor="email"
+                className="font-semibold dark:text-slate-900">
                 Your Email:
               </label>
               <div className="form-icon relative mt-2">
@@ -34,7 +40,7 @@ const LeaveAComment = () => {
                 <input
                   type="email"
                   id="email"
-                  className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                  className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2"
                 />
               </div>
             </div>
@@ -44,14 +50,16 @@ const LeaveAComment = () => {
         <div className="grid grid-cols-1">
           <div className="mb-5">
             <div className="text-start">
-              <label htmlFor="comments" className="font-semibold">
+              <label
+                htmlFor="comments"
+                className="font-semibold dark:text-slate-900">
                 Your Comment:
               </label>
               <div className="form-icon relative mt-2">
-                <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600" />
+                <FaComments className="w-5 h-5 absolute top-1 start-4 text-green-600" />
                 <textarea
                   id="comments"
-                  className="ps-11 h-28 w-full"
+                  className="ps-11 h-28 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                   placeholder="Message :"></textarea>
               </div>
             </div>

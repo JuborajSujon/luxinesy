@@ -24,7 +24,7 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="form-input mt-2 w-full border-2 border-slate-100 p-1 rounded-md"
+                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Name"
                     />
                   </div>
@@ -35,7 +35,7 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="email"
-                      className="form-input mt-2 w-full border-2 border-slate-100 p-1 rounded-md"
+                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Email"
                     />
                   </div>
@@ -49,7 +49,7 @@ const ContactForm = () => {
                     <input
                       name="subject"
                       id="subject"
-                      className="form-input mt-2 w-full border-2 border-slate-100 p-1 rounded-md"
+                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Subject :"
                     />
                   </div>
@@ -62,7 +62,7 @@ const ContactForm = () => {
                       name="comments"
                       id="comments"
                       rows="4"
-                      className="form-input mt-2 textarea w-full border-2 border-slate-100 p-1 rounded-md"
+                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Message :"></textarea>
                   </div>
                 </div>

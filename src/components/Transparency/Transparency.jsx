@@ -28,10 +28,10 @@ const Transparency = () => {
 
         <div className="md:col-span-7">
           <div className="lg:ms-4">
-            <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-semibold">
+            <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-semibold dark:text-slate-200">
               Efficiency. Transparency. <br /> Control.
             </h4>
-            <p className="text-slate-400 max-w-xl">
+            <p className="text-slate-400 dark:text-slate-300 max-w-xl">
               To achieve business transparency, control, and efficiency, it's
               essential to prioritize clear communication, documented processes,
               and access controls. Transparent communication fosters trust with
@@ -47,7 +47,7 @@ const Transparency = () => {
             <div className="mt-4">
               <a
                 href="#"
-                className="btn bg-green-600 hover:bg-green-700 text-white rounded-md mt-3">
+                className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md mt-3">
                 Learn More{" "}
               </a>
             </div>

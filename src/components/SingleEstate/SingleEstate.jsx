@@ -4,7 +4,7 @@ import { FaBath, FaBed } from "react-icons/fa6";
 const SingleEstate = () => {
   return (
     <div className="">
-      <div className="group rounded-lg bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 m-3">
+      <div className="group rounded-lg bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden  m-3">
         <div className="relative">
           <img src="https://i.ibb.co/B42nqn6/slider1.jpg" alt="" />
 
@@ -17,13 +17,15 @@ const SingleEstate = () => {
 
         <div className="p-6">
           <div className="pb-4">
-            <h3 className="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
+            <h3 className="text-lg hover:text-green-600 font-medium dark:text-slate-200 dark:hover:text-green-600">
               710 BOYD DR, Unit #1102, Baton Rouge, LA 70808, USA
             </h3>
           </div>
           <div className="pb-4 flex items-center justify-between">
-            <p className="text-black dark:text-white font-semibold">luxury</p>
-            <p className="text-green-600 p-2 border border-green-600 rounded-md dark:text-white font-semibold">
+            <p className="text-slate-900 dark:text-slate-300  font-semibold">
+              luxury
+            </p>
+            <p className="text-green-600 p-2 border border-green-600 dark:text-slate-300 rounded-md font-semibold">
               For Sale
             </p>
           </div>
@@ -31,30 +33,32 @@ const SingleEstate = () => {
           <ul className="py-4 border-y border-slate-100 dark:border-gray-800 flex items-center flex-wrap list-none">
             <li className="flex items-center me-4">
               <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
-              <span>8000sqf</span>
+              <span className="dark:text-slate-300">8000sqf</span>
             </li>
 
             <li className="flex items-center me-4">
               <FaBed className="lg:text-3xl text-xl sm:text-2xl me-2 text-green-600" />
-              <span>4 Beds</span>
+              <span className="dark:text-slate-300">4 Beds</span>
             </li>
 
             <li className="flex items-center ">
               <FaBath className="lg:text-xl text-sm sm:text-base me-2 text-green-600" />
-              <span className="leading-9">4 Baths</span>
+              <span className="dark:text-slate-300">4 Baths</span>
             </li>
           </ul>
 
           <ul className="pt-6 flex justify-between items-center list-none">
             <li>
-              <span className="text-slate-400">Price</span>
-              <p className="text-lg font-medium">$5000</p>
+              <span className="text-slate-400 dark:text-slate-300">Price</span>
+              <p className="text-lg dark:text-slate-300 font-medium">$5000</p>
             </li>
 
             <li>
               <span className="text-slate-400">Location</span>
               <ul className="text-lg font-medium text-amber-400 list-none">
-                <li className="inline text-black dark:text-white">Address</li>
+                <li className="inline text-slate-900 dark:text-slate-300 ">
+                  Address
+                </li>
               </ul>
             </li>
           </ul>

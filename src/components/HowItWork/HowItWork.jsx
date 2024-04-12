@@ -21,8 +21,10 @@ const HowItWork = () => {
           </div>
 
           <div className="mt-6">
-            <h5 className="text-xl font-medium">Evaluate Property</h5>
-            <p className="text-slate-400 mt-3">
+            <h5 className="text-xl dark:text-slate-200 font-medium">
+              Evaluate Property
+            </h5>
+            <p className="text-slate-400 dark:text-slate-300 mt-3">
               If the distribution of letters and 'words' is random, the reader
               will not be distracted from making.
             </p>
@@ -37,8 +39,10 @@ const HowItWork = () => {
           </div>
 
           <div className="mt-6">
-            <h5 className="text-xl font-medium">Meeting with Agent</h5>
-            <p className="text-slate-400 mt-3">
+            <h5 className="text-xl dark:text-slate-200 font-medium">
+              Meeting with Agent
+            </h5>
+            <p className="text-slate-400 dark:text-slate-300 mt-3">
               If the distribution of letters and 'words' is random, the reader
               will not be distracted from making.
             </p>
@@ -53,8 +57,10 @@ const HowItWork = () => {
           </div>
 
           <div className="mt-6">
-            <h5 className="text-xl font-medium">Close the Deal</h5>
-            <p className="text-slate-400 mt-3">
+            <h5 className="text-xl dark:text-slate-200 font-medium">
+              Close the Deal
+            </h5>
+            <p className="text-slate-400 dark:text-slate-300 mt-3">
               If the distribution of letters and 'words' is random, the reader
               will not be distracted from making.
             </p>

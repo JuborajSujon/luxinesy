@@ -10,7 +10,9 @@ const ContactDetails = () => {
           </div>
 
           <div className="content mt-7">
-            <h5 className="title h5 text-xl font-medium">Phone</h5>
+            <h5 className="title h5 text-xl dark:text-slate-200 font-medium">
+              Phone
+            </h5>
             <p className="text-slate-400 mt-3">
               The phrasal sequence of the is now so that many campaign and
               benefit
@@ -32,7 +34,9 @@ const ContactDetails = () => {
           </div>
 
           <div className="content mt-7">
-            <h5 className="title h5 text-xl font-medium">Email</h5>
+            <h5 className="title h5 text-xl dark:text-slate-200 font-medium">
+              Email
+            </h5>
             <p className="text-slate-400 mt-3">
               The phrasal sequence of the is now so that many campaign and
               benefit
@@ -54,7 +58,9 @@ const ContactDetails = () => {
           </div>
 
           <div className="content mt-7">
-            <h5 className="title h5 text-xl font-medium">Location</h5>
+            <h5 className="title h5 text-xl dark:text-slate-200 font-medium">
+              Location
+            </h5>
             <p className="text-slate-400 mt-3">
               C/54 Northwest Freeway, Suite 558, <br /> Houston, USA 485
             </p>
