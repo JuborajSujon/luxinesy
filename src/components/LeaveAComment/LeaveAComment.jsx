@@ -1,0 +1,72 @@
+import { FaComments, FaUser } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
+const LeaveAComment = () => {
+  return (
+    <div className="p-6 rounded-md shadow-md mt-16 border-2 bg-white mx-2">
+      <h5 className="text-xl font-semibold">Leave A Comment:</h5>
+
+      <form className="mt-8">
+        <div className="grid lg:grid-cols-12 lg:gap-6">
+          <div className="lg:col-span-6 mb-5">
+            <div className="text-start">
+              <label htmlFor="name" className="font-semibold">
+                Your Name:
+              </label>
+              <div className="relative mt-2">
+                <FaUser className="w-4 h-4 absolute top-1/2 -translate-y-1/2 start-4 text-green-600" />
+                <input
+                  type="text"
+                  id="name"
+                  className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 mb-5">
+            <div className="text-start">
+              <label htmlFor="email" className="font-semibold">
+                Your Email:
+              </label>
+              <div className="form-icon relative mt-2">
+                <MdEmail className="w-5 h-5 absolute top-1/2 -translate-y-1/2 start-4 text-green-600" />
+                <input
+                  type="email"
+                  id="email"
+                  className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1">
+          <div className="mb-5">
+            <div className="text-start">
+              <label htmlFor="comments" className="font-semibold">
+                Your Comment:
+              </label>
+              <div className="form-icon relative mt-2">
+                <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600" />
+                <textarea
+                  id="comments"
+                  className="ps-11 h-28 w-full"
+                  placeholder="Message :"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          id="submit"
+          name="send"
+          className="btn text-base bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
+          Send Message
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default LeaveAComment;

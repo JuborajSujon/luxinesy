@@ -32,8 +32,8 @@ const ThemeController = () => {
             className="col-start-1 row-start-1 stroke-base-100 fill-yellow-500"
           />
           <FaSun
-            size={12}
-            className="col-start-2 row-start-1 stroke-base-100 fill-yellow-500"
+            size={15}
+            className="col-start-2 row-start-1 stroke-base-100 fill-green-500"
           />
         </label>
       </span>
