@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HaveQuestion = () => {
   return (
-    <div className="container mx-auto px-4 relative lg:mt-24 mt-16">
+    <div className="container mx-auto px-4 relative lg:mt-24 mt-16 mb-16">
       <div className="grid grid-cols-1 text-center">
         <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">
           Have Question ? Get in touch!
