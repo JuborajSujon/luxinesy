@@ -28,7 +28,7 @@ const SingleEstate = () => {
             </p>
           </div>
 
-          <ul className="py-4 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+          <ul className="py-4 border-y border-slate-100 dark:border-gray-800 flex items-center flex-wrap list-none">
             <li className="flex items-center me-4">
               <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
               <span>8000sqf</span>
