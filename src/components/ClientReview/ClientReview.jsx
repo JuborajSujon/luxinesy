@@ -25,7 +25,7 @@ const ClientReview = () => {
             modules={[Navigation, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
-            navigation={{}}
+            navigation
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
               // when window width is >= 640px

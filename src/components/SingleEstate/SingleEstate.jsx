@@ -9,7 +9,7 @@ const SingleEstate = () => {
           <img src="https://i.ibb.co/B42nqn6/slider1.jpg" alt="" />
 
           <div className="absolute top-4 end-4">
-            <p className="p-4 btn-icon bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full text-slate-700 dark:text-slate-300 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600">
+            <p className="p-2 btn-icon bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full text-slate-700 dark:text-slate-300 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600">
               <AiFillHeart size={20} />
             </p>
           </div>
