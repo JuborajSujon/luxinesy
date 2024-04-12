@@ -18,10 +18,10 @@ const HomeHeroSlider = () => {
       }}
       pagination={{ clickable: true }}
       navigation
-      autoplay={{ delay: 5000, disableOnInteraction: false }}>
+      autoplay={{ delay: 3000, disableOnInteraction: false }}>
       <SwiperSlide>
         <div className="relative h-[70vh] w-full bg-[url('https://i.ibb.co/B42nqn6/slider1.jpg')] bg-no-repeat bg-cover flex items-center bg-center">
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">
@@ -47,7 +47,7 @@ const HomeHeroSlider = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div className="relative h-[70vh] w-full bg-[url('https://i.ibb.co/VqzMTDv/slider2.jpg')] bg-no-repeat bg-cover flex items-center bg-center">
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">
@@ -73,7 +73,7 @@ const HomeHeroSlider = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div className="relative h-[70vh] w-full bg-[url('https://i.ibb.co/t341xj7/slider3.jpg')] bg-no-repeat bg-cover flex items-center bg-center">
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">

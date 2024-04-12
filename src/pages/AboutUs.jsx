@@ -32,7 +32,7 @@ const AboutUs = () => {
       {/* Progress */}
       <Progress />
 
-      <section className="relative lg:py-24 py-16">
+      <section className="relative lg:pt-24 pt-16">
         {/* Team Member */}
         <TeamMember />
 
