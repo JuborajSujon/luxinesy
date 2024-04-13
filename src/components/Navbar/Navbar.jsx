@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../customHook/useAuth";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [user, setUser] = useState(false);
+  const { userSignOut, user, setUser } = useAuth();
+
+  // handle user info show or hide on navbar
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -12,12 +15,15 @@ const Navbar = () => {
     setIsHovered(false);
   };
 
-  const handleLogout = () => {
+  const handleSignout = () => {
+    userSignOut()
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
     setUser(false);
-  };
-
-  const handleLogin = () => {
-    setUser(true);
   };
 
   const navList = (
@@ -99,7 +105,7 @@ const Navbar = () => {
               </label>
 
               <button
-                onClick={handleLogout}
+                onClick={handleSignout}
                 className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10 mt-3">
                 Logout
               </button>
@@ -119,9 +125,7 @@ const Navbar = () => {
         ) : (
           <div>
             <Link to="/login">
-              <button
-                onClick={handleLogin}
-                className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10">
+              <button className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10">
                 Login
               </button>
             </Link>
