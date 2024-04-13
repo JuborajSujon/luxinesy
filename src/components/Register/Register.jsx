@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import useAuth from "../../customHook/useAuth";
 const Register = () => {
   const [password, setPassword] = useState("");
-  const { createUser } = useContext(AuthContext);
+  const { createUser } = useAuth();
   const {
     register,
     handleSubmit,

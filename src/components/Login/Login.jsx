@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import useAuth from "../../customHook/useAuth";
 
 const Login = () => {
   const [password, setPassword] = useState("");
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser } = useAuth();
   const {
     register,
     handleSubmit,
@@ -28,6 +28,9 @@ const Login = () => {
       });
     reset();
   };
+
+  // google login handler
+
   return (
     <section className="max-w-[1540px] mx-auto py-16 sm:pt-20 sm:pb-36 flex items-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2"></div>
