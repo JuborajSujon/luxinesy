@@ -8,7 +8,7 @@ import useAuth from "../../customHook/useAuth";
 
 const Login = () => {
   const [password, setPassword] = useState("");
-  const { signInUser, googleLogin } = useAuth();
+  const { signInUser, googleLogin, githubLogin } = useAuth();
   const {
     register,
     handleSubmit,
@@ -32,6 +32,17 @@ const Login = () => {
   // google login handler
   const handleGoogleLogin = () => {
     googleLogin()
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // github login handler
+  const handleGithubLogin = () => {
+    githubLogin()
       .then((result) => {
         const user = result.user;
       })
@@ -145,7 +156,9 @@ const Login = () => {
                 <FaGoogle size={20} />
                 Login with Google
               </button>
-              <button className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
+              <button
+                onClick={handleGithubLogin}
+                className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
                 <BsGithub className="text-black" size={20} />
                 Login with Github
               </button>

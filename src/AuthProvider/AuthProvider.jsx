@@ -3,6 +3,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
+  GithubAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
 import PropTypes from "prop-types";
@@ -11,6 +12,7 @@ import auth from "../firebase/firebase.config";
 
 // Social Auth Provider
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 // Auth Context
 export const AuthContext = createContext(null);
@@ -29,6 +31,11 @@ const AuthProvider = ({ children }) => {
   // sign with google
   const googleLogin = () => {
     return signInWithPopup(auth, googleProvider);
+  };
+
+  // sign with github
+  const githubLogin = () => {
+    return signInWithPopup(auth, githubProvider);
   };
 
   // observer user
@@ -52,7 +59,7 @@ const AuthProvider = ({ children }) => {
   });
   console.log(user);
 
-  const authInfo = { createUser, signInUser, googleLogin, user };
+  const authInfo = { createUser, signInUser, googleLogin, githubLogin, user };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
