@@ -18,9 +18,7 @@ const Register = () => {
     const { email, password } = data;
     // Register Handler for create user
     createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-      })
+      .then(() => {})
       .catch((error) => {
         console.log(error.message);
       });

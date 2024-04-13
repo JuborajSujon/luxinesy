@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../customHook/useAuth";
 
@@ -15,15 +15,14 @@ const Navbar = () => {
     setIsHovered(false);
   };
 
-  const handleSignout = () => {
+  const handleLogout = () => {
     userSignOut()
-      .then((result) => {
-        const user = result.user;
+      .then(() => {
+        setUser(null);
       })
       .catch((error) => {
         console.log(error.message);
       });
-    setUser(false);
   };
 
   const navList = (
@@ -105,7 +104,7 @@ const Navbar = () => {
               </label>
 
               <button
-                onClick={handleSignout}
+                onClick={handleLogout}
                 className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10 mt-3">
                 Logout
               </button>
@@ -113,11 +112,12 @@ const Navbar = () => {
             {isHovered && (
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-0 -ml-32 z-[1] p-2 shadow bg-base-100 rounded-box w-64 absolute">
-                <li>
-                  <button className="btn btn-sm text-lg btn-ghost">
-                    {user?.displayName || "user name not found"}
-                  </button>
+                className="menu menu-sm dropdown-content mt-0 -ml-32 z-[1] py-3 px-4 shadow bg-base-100 rounded-md w-64 absolute">
+                <li className="text-base font-medium">
+                  Name : {user?.displayName || "user name not found"}
+                </li>
+                <li className="text-base font-medium">
+                  Email : {user?.email || "user email not found"}
                 </li>
               </ul>
             )}
