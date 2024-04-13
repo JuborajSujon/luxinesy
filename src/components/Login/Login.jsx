@@ -8,7 +8,7 @@ import useAuth from "../../customHook/useAuth";
 
 const Login = () => {
   const [password, setPassword] = useState("");
-  const { signInUser } = useAuth();
+  const { signInUser, googleLogin } = useAuth();
   const {
     register,
     handleSubmit,
@@ -30,6 +30,15 @@ const Login = () => {
   };
 
   // google login handler
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   return (
     <section className="max-w-[1540px] mx-auto py-16 sm:pt-20 sm:pb-36 flex items-center relative overflow-hidden">
@@ -130,7 +139,9 @@ const Login = () => {
             </form>
             <div className="divider">OR</div>
             <div className="mb-4 space-y-2">
-              <button className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
+              <button
+                onClick={handleGoogleLogin}
+                className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
                 <FaGoogle size={20} />
                 Login with Google
               </button>
