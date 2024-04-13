@@ -24,7 +24,7 @@ const Footer = () => {
           <form className="relative text-center space-y-2 sm:space-y-0">
             <input
               type="email"
-              className=" bg-white shadow-md border-2  w-full p-3 rounded-full"
+              className=" ps-5 bg-white shadow-md border-2 text-slate-900  w-full p-3 rounded-full"
               placeholder="Enter your email"
             />
             <button

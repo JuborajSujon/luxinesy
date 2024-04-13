@@ -48,10 +48,10 @@ const Login = () => {
                     <input
                       id="LoginPassword"
                       type={password ? "" : "password"}
-                      className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
+                      className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3 pe-10"
                       placeholder="Enter Your Password"
                     />
-                    <div className="absolute top-1/2 -translate-y-1/2 right-2">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-3 mt-1">
                       {password ? (
                         <BsEyeSlash
                           onClick={() => setPassword(!password)}
