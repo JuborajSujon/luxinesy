@@ -1,14 +1,38 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 import PropTypes from "prop-types";
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
   // create user
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
+  // observer user
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        const loggedUser = {
+          email: currentUser.email,
+          name: currentUser.displayName,
+          photo: currentUser.photoURL,
+        };
+        localStorage.setItem("luxinesy-user", JSON.stringify(loggedUser));
+      } else {
+        localStorage.removeItem("luxinesy-user");
+      }
+    });
+    return () => {
+      unsubscribe();
+    };
+  });
   const authInfo = { createUser };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
