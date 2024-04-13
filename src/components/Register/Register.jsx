@@ -1,8 +1,33 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Register = () => {
   const [password, setPassword] = useState("");
+  const { createUser } = useContext(AuthContext);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  // Register Handler for create user
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    // Register Handler for create user
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+    reset();
+  };
+
   return (
     <section className="py-16 sm:pt-20 sm:pb-36 max-w-[1540px] mx-auto flex items-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2"></div>
@@ -19,7 +44,7 @@ const Register = () => {
             <h5 className="my-4 text-xl text-slate-700 dark:text-slate-900 font-semibold">
               Register
             </h5>
-            <form className="text-start">
+            <form className="text-start" onSubmit={handleSubmit(onSubmit)}>
               <div className="grid grid-cols-1">
                 <div className="mb-3 flex flex-col">
                   <label
@@ -28,11 +53,17 @@ const Register = () => {
                     Full Name
                   </label>
                   <input
+                    {...register("fullName", { required: true })}
                     id="fullName"
                     type="text"
                     className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                     placeholder="Enter Your Full Name"
                   />
+                  {errors.fullName && (
+                    <span className="text-red-500">
+                      Please enter a valid name
+                    </span>
+                  )}
                 </div>
                 <div className="mb-3 flex flex-col">
                   <label
@@ -41,6 +72,7 @@ const Register = () => {
                     Photo URL
                   </label>
                   <input
+                    {...register("photoURL")}
                     id="photo"
                     type="text"
                     className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
@@ -54,11 +86,17 @@ const Register = () => {
                     Email Address:
                   </label>
                   <input
+                    {...register("email", { required: true })}
                     id="LoginEmail"
                     type="email"
                     className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                     placeholder="name@example.com"
                   />
+                  {errors.email && (
+                    <span className="text-red-500">
+                      Please enter a valid email
+                    </span>
+                  )}
                 </div>
 
                 <div className="mb-4 flex flex-col">
@@ -69,11 +107,17 @@ const Register = () => {
                   </label>
                   <div className="relative">
                     <input
+                      {...register("password", { required: true })}
                       id="LoginPassword"
                       type={password ? "" : "password"}
                       className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                       placeholder="Enter Your Password"
                     />
+                    {errors.password && (
+                      <span className="text-red-500">
+                        Please enter a valid password
+                      </span>
+                    )}
                     <div className="absolute mt-2 top-1/2 -translate-y-1/2 right-2">
                       {password ? (
                         <BsEyeSlash
@@ -92,6 +136,7 @@ const Register = () => {
 
                 <div className="flex items-center mb-4">
                   <input
+                    {...register("acceptTerms")}
                     className="rounded checkbox border-gray-200  text-green-600 focus:border-green-300 focus:ring focus:ring-offset-0 focus:ring-green-200 focus:ring-opacity-50 me-2"
                     type="checkbox"
                     value=""
