@@ -1,33 +1,68 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FiCamera } from "react-icons/fi";
 import {
   FaBed,
   FaBath,
   FaUser,
+  FaCar,
   FaComments,
   FaCompressArrowsAlt,
 } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import Container from "../components/Container/Container";
+import { useEffect, useState } from "react";
 
 const BlogDetails = () => {
+  const { newId } = useParams();
+  const numId = parseInt(newId);
+  const [estate, setEstate] = useState([]);
+
+  useEffect(() => {
+    const getEstateData = async () => {
+      const res = await fetch(
+        `https://juborajsujon.github.io/personal-project-api/ph9estate.json`
+      );
+      const data = await res.json();
+      const newEstate = data.find((item) => item.id === numId);
+
+      setEstate(newEstate);
+    };
+    getEstateData();
+  }, [numId]);
+
+  const {
+    estate_title,
+    segment_name,
+    description,
+    price,
+    status,
+    area,
+    location,
+    facilities,
+    image,
+    bedrooms,
+    bathrooms,
+    garage,
+    year_built,
+  } = estate;
+
   return (
     <Container>
       <section className="relative md:pb-24 pb-16">
         <div className="container-fluid">
-          <div className="md:flex mt-4">
+          <div className="md:flex mt-4 h-[320px]">
             <div className="lg:w-1/2 md:w-1/2 p-1">
               <div className="group relative overflow-hidden w-full h-full ">
                 <img
                   className="w-full h-full object-cover"
-                  src="https://i.ibb.co/vQHGNXX/Dubai-Marina-1.webp"
+                  src={image?.[0]}
                   alt=""
                 />
                 <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
                 <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
                   <Link
-                    to="https://i.ibb.co/vQHGNXX/Dubai-Marina-1.webp"
+                    to={image?.[0]}
                     target="_blank"
                     className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox">
                     <FiCamera size={17} />
@@ -42,13 +77,13 @@ const BlogDetails = () => {
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
                       className="w-full h-full object-cover"
-                      src="https://i.ibb.co/tZNVSsD/Dubai-Marina-2.webp"
+                      src={image?.[1]}
                       alt=""
                     />
                     <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
                       <Link
-                        to="https://i.ibb.co/tZNVSsD/Dubai-Marina-2.webp"
+                        to={image?.[1]}
                         target="_blank"
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox">
                         <FiCamera size={17} />
@@ -61,13 +96,13 @@ const BlogDetails = () => {
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
                       className="w-full h-full object-cover"
-                      src="https://i.ibb.co/FKh38d2/Dubai-Marina-3.webp"
+                      src={image?.[2]}
                       alt=""
                     />
                     <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
                       <Link
-                        to="https://i.ibb.co/FKh38d2/Dubai-Marina-3.webp"
+                        to={image?.[2]}
                         target="_blank"
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox">
                         <FiCamera size={17} />
@@ -82,13 +117,13 @@ const BlogDetails = () => {
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
                       className="w-full h-full object-cover"
-                      src="https://i.ibb.co/mFRMbxC/Dubai-Marina-4.webp"
+                      src={image?.[3]}
                       alt=""
                     />
                     <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
                       <Link
-                        to="https://i.ibb.co/mFRMbxC/Dubai-Marina-4.webp"
+                        to={image?.[3]}
                         target="_blank"
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox">
                         <FiCamera size={17} />
@@ -101,13 +136,13 @@ const BlogDetails = () => {
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
                       className="w-full h-full object-cover"
-                      src="https://i.ibb.co/myn3s3D/Dubai-Marina-5.webp"
+                      src={image?.[4]}
                       alt=""
                     />
                     <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
                       <Link
-                        to="https://i.ibb.co/myn3s3D/Dubai-Marina-5.webp"
+                        to={image?.[4]}
                         target="_blank"
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox">
                         <FiCamera size={17} />
@@ -123,49 +158,32 @@ const BlogDetails = () => {
         <div className=" lg:mt-24 md:mt-16 mt-8">
           <div className="md:flex">
             <div className="lg:w-2/3 md:w-1/2 md:p-4 px-3">
-              <h4 className="text-2xl font-medium">
-                10765 Hillshire Ave, Baton Rouge, LA 70810, USA
-              </h4>
+              <h4 className="text-2xl font-medium">{estate_title}</h4>
 
-              <ul className="py-6 flex items-center list-none">
+              <ul className="py-6 flex items-center list-none ">
                 <li className="flex items-center lg:me-6 me-4">
                   <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
-                  <span className="lg:text-xl">8000sqf</span>
+                  <span className="lg:text-xl">{area}</span>
                 </li>
 
                 <li className="flex items-center lg:me-6 me-4">
                   <FaBed className="lg:text-3xl text-xl sm:text-2xl me-2 text-green-600" />
-                  <span className="lg:text-xl">4 Beds</span>
+                  <span className="lg:text-xl">{bedrooms} Beds</span>
                 </li>
 
                 <li className="flex items-center">
                   <FaBath className="lg:text-xl text-sm sm:text-base me-2 text-green-600" />
-                  <span className="lg:text-xl">4 Baths</span>
+                  <span className="lg:text-xl">{bathrooms} Baths</span>
+                </li>
+                <li className="flex items-center ms-4">
+                  <FaCar className="lg:text-xl text-sm sm:text-base me-2 text-green-600" />
+                  <span className="lg:text-xl">
+                    {garage ? garage : 0} Garage
+                  </span>
                 </li>
               </ul>
 
-              <p className="text-slate-400">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
-              </p>
-              <p className="text-slate-400 mt-4">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the master-builder
-                of human happiness.
-              </p>
-              <p className="text-slate-400 mt-4">
-                Nor again is there anyone who loves or pursues or desires to
-                obtain pain of itself, because it is pain, but because
-                occasionally circumstances occur in which toil and pain can
-                procure him some great pleasure.
-              </p>
+              <p className="text-slate-400">{description}</p>
 
               <div className="w-full leading-[0] border-0 mt-6">
                 <iframe
@@ -232,13 +250,12 @@ const BlogDetails = () => {
                       </div>
                     </div>
                   </div>
-                  <button
-                    type="submit"
+                  <Link
                     id="submit"
                     name="send"
                     className="btn text-base bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
                     Send Message
-                  </button>
+                  </Link>
                 </form>
               </div>
             </div>
@@ -247,37 +264,48 @@ const BlogDetails = () => {
               <div className="sticky top-20">
                 <div className="rounded-md bg-slate-50 dark:bg-slate-800 shadow dark:shadow-gray-700">
                   <div className="p-6">
-                    <h5 className="text-2xl font-medium">Price:</h5>
+                    <div className="flex justify-between items-center">
+                      <h5 className="text-2xl font-medium">Price:</h5>
+                      <h5 className="text-xl text-violet-500 font-medium">
+                        {segment_name}
+                      </h5>
+                    </div>
 
                     <div className="flex justify-between items-center mt-4">
-                      <span className="text-xl font-medium">$ 45,231</span>
+                      <span className="text-xl font-medium"> {price}</span>
 
                       <span className="bg-green-600/10 text-green-600 text-sm px-2.5 py-0.75 rounded h-6">
-                        For Sale
+                        For {status}
                       </span>
                     </div>
 
                     <ul className="list-none mt-4">
                       <li className="flex justify-between items-center">
                         <span className="text-slate-400 text-sm">
-                          Days on Hously
+                          Facilities
                         </span>
-                        <span className="font-medium text-sm">124 Days</span>
+                        <div>
+                          {facilities?.map((facility, index) => (
+                            <span
+                              className="text-slate-900 dark:text-slate-300 block font-medium text-sm"
+                              key={index}>
+                              {facility}
+                            </span>
+                          ))}
+                        </div>
+                      </li>
+
+                      <li className="flex justify-between items-center mt-2">
+                        <span className="text-slate-400 text-sm">Location</span>
+                        <span className="font-medium text-sm">{location}</span>
                       </li>
 
                       <li className="flex justify-between items-center mt-2">
                         <span className="text-slate-400 text-sm">
-                          Price per sq ft
-                        </span>
-                        <span className="font-medium text-sm">$ 186</span>
-                      </li>
-
-                      <li className="flex justify-between items-center mt-2">
-                        <span className="text-slate-400 text-sm">
-                          Monthly Payment (estimate)
+                          Year of Construction
                         </span>
                         <span className="font-medium text-sm">
-                          $ 1497/Monthly
+                          {year_built}
                         </span>
                       </li>
                     </ul>
@@ -373,13 +401,9 @@ const BlogDetails = () => {
                 </div>
               </div>
             </div>
-            <button
-              type="submit"
-              id="submit"
-              name="send"
-              className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
+            <Link className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
               Send Message
-            </button>
+            </Link>
           </form>
         </div>
       </section>

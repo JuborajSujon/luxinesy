@@ -27,11 +27,9 @@ const Footer = () => {
               className=" ps-5 bg-white shadow-md border-2 text-slate-900  w-full p-3 rounded-full"
               placeholder="Enter your email"
             />
-            <button
-              type="submit"
-              className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2 hover:bg-transparent hover:text-green-600 hover:border-green-600 border-no">
+            <Link className="btn text-base sm:absolute bg-green-600 px-8 text-white rounded-full sm:-ml-[134px] sm:top-1/2 sm:transform sm:-translate-y-1/2 hover:bg-transparent hover:text-green-600 hover:border-green-600 border-no">
               Subscribe
-            </button>
+            </Link>
           </form>
         </div>
       </div>
