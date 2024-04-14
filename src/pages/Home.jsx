@@ -9,6 +9,8 @@ import { useEffect } from "react";
 
 const Home = () => {
   const data = useLoaderData();
+
+  // ensure that the new page starts at the top when navigating
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

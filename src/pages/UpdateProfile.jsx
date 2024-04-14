@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ProfileUpdateDetails from "../components/ProfileUpdateDetails/ProfileUpdateDetails";
 
 const UpdateProfile = () => {
+  // ensure that the new page starts at the top when navigating
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

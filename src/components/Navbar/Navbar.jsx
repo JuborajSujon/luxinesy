@@ -88,11 +88,14 @@ const Navbar = () => {
         {user ? (
           <div className="relative">
             <div className="flex items-center  gap-1 sm:gap-2">
+              <div className="text-base sm:text-xl font-semibold hidden lg:block">
+                {user?.displayName}
+              </div>
               <label
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 tabIndex={0}
-                className="btn btn-ghost btn-circle avatar hover:bg-green-500 min-h-8 h-10 w-10  sm:min-h-12 sm:h-12 sm:w-12 mt-2">
+                className="btn btn-ghost btn-circle avatar hover:bg-green-500 min-h-8 h-10 w-10  sm:min-h-12 sm:h-12 sm:w-12">
                 <div className="w-12 rounded-full">
                   <img
                     className=""
@@ -105,7 +108,7 @@ const Navbar = () => {
 
               <button
                 onClick={handleLogout}
-                className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10 mt-3">
+                className="btn btn-ghost border border-green-500 hover:bg-green-500 hover:text-white text-base sm:text-xl font-semibold min-h-8 h-8 px-2 sm:px-4 sm:min-h-10 sm:h-10">
                 Logout
               </button>
             </div>

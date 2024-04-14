@@ -27,6 +27,8 @@ const BlogDetails = () => {
       const newEstate = data.find((item) => item.id === numId);
 
       setEstate(newEstate);
+
+      // ensure that the new page starts at the top when navigating
       window.scrollTo(0, 0);
     };
     getEstateData();

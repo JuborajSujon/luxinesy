@@ -5,6 +5,7 @@ import Container from "../components/Container/Container";
 import GoogleMapContact from "../components/GoogleMapContact/GoogleMapContact";
 
 const Contact = () => {
+  // ensure that the new page starts at the top when navigating
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

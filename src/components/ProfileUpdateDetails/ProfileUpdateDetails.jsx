@@ -1,7 +1,18 @@
 import UpdateProfileImage from "../../assets/Startup_Flatline.svg";
+import useAuth from "../../customHook/useAuth";
 import HaveQuestion from "../HaveQuestion/HaveQuestion";
 import LeaveAComment from "../LeaveAComment/LeaveAComment";
+import { useForm } from "react-hook-form";
 const ProfileUpdateDetails = () => {
+  const { user } = useAuth();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-20 relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-3">
@@ -19,7 +30,7 @@ const ProfileUpdateDetails = () => {
               <div className="">
                 <img
                   className="w-full rounded-md"
-                  src="https://i.ibb.co/t341xj7/slider3.jpg"
+                  src={user?.photoURL || "https://i.ibb.co/Jn1jJHN/avater.png"}
                   alt=""
                 />
               </div>
@@ -27,13 +38,13 @@ const ProfileUpdateDetails = () => {
                 <h3 className="text-lg font-medium dark:text-slate-900">
                   Name:{" "}
                   <span className="font-normal dark:text-slate-900">
-                    Sajid Hossain
+                    {user?.displayName}
                   </span>
                 </h3>
                 <h3 className="text-lg font-medium dark:text-slate-900">
                   Email:{" "}
                   <span className="font-normal dark:text-slate-900">
-                    9bJpQ@example.com
+                    {user?.email || "user email not found"}
                   </span>
                 </h3>
               </div>
@@ -43,7 +54,7 @@ const ProfileUpdateDetails = () => {
                 Update Profile
               </h3>
 
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="grid lg:grid-cols-12 lg:gap-6">
                   <div className="lg:col-span-6 mb-5 flex flex-col gap-1">
                     <label
@@ -52,10 +63,16 @@ const ProfileUpdateDetails = () => {
                       Your Name:
                     </label>
                     <input
+                      {...register("fullName", { required: true })}
                       type="text"
                       className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Name"
                     />
+                    {errors.fullName && (
+                      <span className="text-red-500">
+                        Please enter a valid name
+                      </span>
+                    )}
                   </div>
 
                   <div className="lg:col-span-6 mb-5 flex flex-col gap-1">
@@ -65,10 +82,16 @@ const ProfileUpdateDetails = () => {
                       Your Email:
                     </label>
                     <input
+                      {...register("email", { required: true })}
                       type="email"
                       className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
                       placeholder="Email"
                     />
+                    {errors.email && (
+                      <span className="text-red-500">
+                        Please enter a valid email
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -80,16 +103,24 @@ const ProfileUpdateDetails = () => {
                       Your Photo URL:
                     </label>
                     <input
-                      name="subject"
+                      {...register("photoURL", { required: true })}
+                      type="text"
                       id="subject"
                       className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
-                      placeholder="Subject :"
+                      placeholder=" Photo URL"
                     />
+                    {errors.email && (
+                      <span className="text-red-500">
+                        Please enter a valid email
+                      </span>
+                    )}
                   </div>
                 </div>
-                <button className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md dark:border-none">
-                  Send Message
-                </button>
+                <input
+                  type="submit"
+                  value="Update Profile"
+                  className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md dark:border-none"
+                />
               </form>
             </div>
           </div>

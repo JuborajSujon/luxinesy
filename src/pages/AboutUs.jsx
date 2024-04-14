@@ -9,6 +9,7 @@ import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 import { useEffect } from "react";
 
 const AboutUs = () => {
+  // ensure that the new page starts at the top when navigating
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
