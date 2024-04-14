@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import useAuth from "../../customHook/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [password, setPassword] = useState("");
@@ -29,13 +30,15 @@ const Login = () => {
     const { email, password } = data;
     signInUser(email, password)
       .then((result) => {
+        toast.success("Login Successful");
         const user = result.user;
+
         if (user) {
           navigate(location?.state || "/");
         }
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        toast.error("Login Failed");
       });
     reset();
   };

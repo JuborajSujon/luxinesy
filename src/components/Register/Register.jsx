@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import useAuth from "../../customHook/useAuth";
+import { toast } from "react-toastify";
 const Register = () => {
   const [password, setPassword] = useState("");
   const { createUser, updateUserProfile } = useAuth();
@@ -27,19 +28,20 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
+        toast.success("User Created Successfully");
         // update user profile
         updateUserProfile(fullName, photoURL)
           .then(() => {})
-          .catch((error) => {
-            console.log(error.message);
+          .catch(() => {
+            toast.error("User Profile Updated Failed");
           });
 
         if (user) {
           navigate("/");
         }
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        toast.error("User Created Failed");
       });
     reset();
   };

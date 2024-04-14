@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import UpdateProfileImage from "../../assets/Startup_Flatline.svg";
 import useAuth from "../../customHook/useAuth";
 import HaveQuestion from "../HaveQuestion/HaveQuestion";
 import LeaveAComment from "../LeaveAComment/LeaveAComment";
 import { useForm } from "react-hook-form";
 const ProfileUpdateDetails = () => {
-  const { user } = useAuth();
+  const { user, updateUserProfile, reload, setReload } = useAuth();
 
   const {
     register,
@@ -12,7 +13,18 @@ const ProfileUpdateDetails = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  useEffect(() => {}, [user, reload]);
+
+  const onSubmit = (data) => {
+    const { fullName, photoURL } = data;
+    updateUserProfile(fullName, photoURL)
+      .then(() => {
+        setReload(!reload);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-20 relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-3">
