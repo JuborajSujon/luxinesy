@@ -28,9 +28,10 @@ const Login = () => {
   // Login Handler
   const onSubmit = (data) => {
     const { email, password } = data;
+    // Login Handler
     signInUser(email, password)
       .then((result) => {
-        toast.success("Login Successful");
+        toast.success("Login Successful", { autoClose: 2000 });
         const user = result.user;
 
         if (user) {
@@ -38,7 +39,7 @@ const Login = () => {
         }
       })
       .catch(() => {
-        toast.error("Login Failed");
+        toast.error("Login Failed", { autoClose: 2000 });
       });
     reset();
   };
@@ -48,12 +49,13 @@ const Login = () => {
     socialProvider()
       .then((result) => {
         const user = result.user;
+        toast.success("Login Successful", { autoClose: 2000 });
         if (user) {
           navigate(location?.state || "/");
         }
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        toast.error("Login Failed", { autoClose: 2000 });
       });
   };
 

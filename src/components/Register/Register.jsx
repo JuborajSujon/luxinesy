@@ -24,16 +24,41 @@ const Register = () => {
   // Register Handler for create user , update user profile
   const onSubmit = (data) => {
     const { email, password, fullName, photoURL } = data;
+
+    if (password.length < 6) {
+      toast.error("Password must be 6 characters or longer", {
+        autoClose: 2000,
+      });
+      return;
+    }
+
+    if (!/(?=.*[A-Z])/.test(password)) {
+      toast.error("Password must contain at least one uppercase letter", {
+        autoClose: 2000,
+      });
+      return;
+    }
+
+    if (!/(?=.*[a-z])/.test(password)) {
+      toast.error("Password must contain at least one lowercase letter", {
+        autoClose: 2000,
+      });
+      return;
+    }
     // Register Handler for create user
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        toast.success("User Created Successfully");
+        toast.success("User Created Successfully", {
+          autoClose: 2000,
+        });
         // update user profile
         updateUserProfile(fullName, photoURL)
           .then(() => {})
           .catch(() => {
-            toast.error("User Profile Updated Failed");
+            toast.error("User Profile Updated Failed", {
+              autoClose: 2000,
+            });
           });
 
         if (user) {
@@ -41,7 +66,9 @@ const Register = () => {
         }
       })
       .catch(() => {
-        toast.error("User Created Failed");
+        toast.error("User Created Failed", {
+          autoClose: 2000,
+        });
       });
     reset();
   };

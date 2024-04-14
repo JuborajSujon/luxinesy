@@ -4,7 +4,7 @@ import useAuth from "../../customHook/useAuth";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { userSignOut, user, setUser } = useAuth();
+  const { userSignOut, user, setUser, reload } = useAuth();
 
   // handle user info show or hide on navbar
   const handleMouseEnter = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
       });
   };
 
-  useEffect(() => {}, [user]);
+  useEffect(() => {}, [user, reload]);
 
   const navList = (
     <>
