@@ -8,3 +8,7 @@
 .swiper-button-prev {
   color: #02b960 !important;
 }
+
+.flex-flow {
+  flex-flow: column;
+}

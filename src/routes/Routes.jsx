@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () =>
+          fetch(
+            "https://juborajsujon.github.io/personal-project-api/ph9estate.json"
+          ),
       },
       {
         path: "/profile",
@@ -48,7 +52,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/blogdetails",
+        path: "/blogdetails:id",
         element: <BlogDetails />,
       },
     ],
