@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import ProfileUpdateDetails from "../components/ProfileUpdateDetails/ProfileUpdateDetails";
 
 const UpdateProfile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <section

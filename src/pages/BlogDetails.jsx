@@ -27,6 +27,7 @@ const BlogDetails = () => {
       const newEstate = data.find((item) => item.id === numId);
 
       setEstate(newEstate);
+      window.scrollTo(0, 0);
     };
     getEstateData();
   }, [numId]);
@@ -161,7 +162,7 @@ const BlogDetails = () => {
             <div className="lg:w-2/3 md:w-1/2 md:p-4 px-3">
               <h4 className="text-2xl font-medium">{estate_title}</h4>
 
-              <ul className="py-6 flex flex-wrap items-center list-none gap-4">
+              <ul className="py-6 flex flex-wrap items-center list-none gap-2">
                 <li className="flex items-center lg:me-6 ">
                   <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
                   <span className="lg:text-xl">{area}</span>
@@ -254,12 +255,13 @@ const BlogDetails = () => {
                       </div>
                     </div>
                   </div>
-                  <Link
+                  <button
+                    type="submit"
                     id="submit"
                     name="send"
                     className="btn text-base bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
                     Send Message
-                  </Link>
+                  </button>
                 </form>
               </div>
             </div>
@@ -411,9 +413,11 @@ const BlogDetails = () => {
                 </div>
               </div>
             </div>
-            <Link className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
+            <button
+              type="button"
+              className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">
               Send Message
-            </Link>
+            </button>
           </form>
         </div>
       </section>

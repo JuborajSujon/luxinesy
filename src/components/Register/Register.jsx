@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import useAuth from "../../customHook/useAuth";
 const Register = () => {
   const [password, setPassword] = useState("");
   const { createUser } = useAuth();
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -13,12 +15,22 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
+  //  ensure that the new page starts at the top when navigating
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Register Handler for create user
   const onSubmit = (data) => {
     const { email, password } = data;
     // Register Handler for create user
     createUser(email, password)
-      .then(() => {})
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          navigate("/");
+        }
+      })
       .catch((error) => {
         console.log(error.message);
       });

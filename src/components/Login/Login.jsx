@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import useAuth from "../../customHook/useAuth";
@@ -9,6 +9,9 @@ import useAuth from "../../customHook/useAuth";
 const Login = () => {
   const [password, setPassword] = useState("");
   const { signInUser, googleLogin, githubLogin } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const {
     register,
     handleSubmit,
@@ -16,12 +19,20 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  //  ensure that the new page starts at the top when navigating
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Login Handler
   const onSubmit = (data) => {
     const { email, password } = data;
     signInUser(email, password)
       .then((result) => {
         const user = result.user;
+        if (user) {
+          navigate(location?.state || "/");
+        }
       })
       .catch((error) => {
         console.log(error.message);
@@ -29,22 +40,14 @@ const Login = () => {
     reset();
   };
 
-  // google login handler
-  const handleGoogleLogin = () => {
-    googleLogin()
+  // Handle social login
+  const handleSocialLogin = (socialProvider) => {
+    socialProvider()
       .then((result) => {
         const user = result.user;
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-
-  // github login handler
-  const handleGithubLogin = () => {
-    githubLogin()
-      .then((result) => {
-        const user = result.user;
+        if (user) {
+          navigate(location?.state || "/");
+        }
       })
       .catch((error) => {
         console.log(error.message);
@@ -151,13 +154,13 @@ const Login = () => {
             <div className="divider">OR</div>
             <div className="mb-4 space-y-2">
               <button
-                onClick={handleGoogleLogin}
+                onClick={() => handleSocialLogin(googleLogin)}
                 className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
                 <FaGoogle size={20} />
                 Login with Google
               </button>
               <button
-                onClick={handleGithubLogin}
+                onClick={() => handleSocialLogin(githubLogin)}
                 className="btn text-base bg-green-600 hover:bg-green-700 text-white rounded-md w-full border-none">
                 <BsGithub className="text-black" size={20} />
                 Login with Github

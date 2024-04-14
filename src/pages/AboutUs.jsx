@@ -6,8 +6,12 @@ import Container from "../components/Container/Container";
 import TeamMember from "../components/TeamMember/TeamMember";
 import ClientReview from "../components/ClientReview/ClientReview";
 import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <section
