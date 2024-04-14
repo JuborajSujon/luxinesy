@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import BlogDetails from "../pages/BlogDetails";
 import Home from "../pages/Home";
 import UpdateProfile from "../pages/UpdateProfile";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,11 @@ const router = createBrowserRouter([
 
       {
         path: "/blogdetails/:newId",
-        element: <BlogDetails />,
+        element: (
+          <PrivateRoute>
+            <BlogDetails />
+          </PrivateRoute>
+        ),
       },
     ],
   },

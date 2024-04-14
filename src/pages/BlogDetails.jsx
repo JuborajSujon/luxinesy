@@ -51,8 +51,8 @@ const BlogDetails = () => {
     <Container>
       <section className="relative md:pb-24 pb-16">
         <div className="container-fluid">
-          <div className="md:flex mt-4 h-[320px]">
-            <div className="lg:w-1/2 md:w-1/2 p-1">
+          <div className="md:flex mt-4  ">
+            <div className="md:w-1/2 p-1">
               <div className="group relative overflow-hidden w-full h-full ">
                 <img
                   className="w-full h-full object-cover"
@@ -71,8 +71,8 @@ const BlogDetails = () => {
               </div>
             </div>
 
-            <div className="lg:w-1/2 md:w-1/2">
-              <div className="flex">
+            <div className="md:w-1/2 grid">
+              <div className="flex ">
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
@@ -112,7 +112,7 @@ const BlogDetails = () => {
                 </div>
               </div>
 
-              <div className="flex">
+              <div className="flex ">
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden w-full h-full">
                     <img
@@ -157,16 +157,17 @@ const BlogDetails = () => {
 
         <div className=" lg:mt-24 md:mt-16 mt-8">
           <div className="md:flex">
+            {/* Production Details left sidebar */}
             <div className="lg:w-2/3 md:w-1/2 md:p-4 px-3">
               <h4 className="text-2xl font-medium">{estate_title}</h4>
 
-              <ul className="py-6 flex items-center list-none ">
-                <li className="flex items-center lg:me-6 me-4">
+              <ul className="py-6 flex flex-wrap items-center list-none gap-4">
+                <li className="flex items-center lg:me-6 ">
                   <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
                   <span className="lg:text-xl">{area}</span>
                 </li>
 
-                <li className="flex items-center lg:me-6 me-4">
+                <li className="flex items-center lg:me-6 ">
                   <FaBed className="lg:text-3xl text-xl sm:text-2xl me-2 text-green-600" />
                   <span className="lg:text-xl">{bedrooms} Beds</span>
                 </li>
@@ -175,7 +176,7 @@ const BlogDetails = () => {
                   <FaBath className="lg:text-xl text-sm sm:text-base me-2 text-green-600" />
                   <span className="lg:text-xl">{bathrooms} Baths</span>
                 </li>
-                <li className="flex items-center ms-4">
+                <li className="flex items-center">
                   <FaCar className="lg:text-xl text-sm sm:text-base me-2 text-green-600" />
                   <span className="lg:text-xl">
                     {garage ? garage : 0} Garage
@@ -184,6 +185,8 @@ const BlogDetails = () => {
               </ul>
 
               <p className="text-slate-400">{description}</p>
+
+              {/* Google map */}
 
               <div className="w-full leading-[0] border-0 mt-6">
                 <iframe
@@ -195,6 +198,7 @@ const BlogDetails = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
+              {/* Leave a comment: */}
 
               <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-200 mx-2 hidden md:block">
                 <h5 className="text-xl font-semibold">Leave A Comment:</h5>
@@ -211,7 +215,7 @@ const BlogDetails = () => {
                           <input
                             type="text"
                             id="name"
-                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                           />
                         </div>
                       </div>
@@ -227,7 +231,7 @@ const BlogDetails = () => {
                           <input
                             type="email"
                             id="email"
-                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                           />
                         </div>
                       </div>
@@ -244,7 +248,7 @@ const BlogDetails = () => {
                           <FaComments className="w-5 h-5 absolute top-2 start-4 text-green-600" />
                           <textarea
                             id="comments"
-                            className="ps-11 h-28 w-full border-2 border-slate-200 rounded-md py-2"
+                            className="ps-11 h-28 w-full border-2 border-slate-200 rounded-md py-2 dark:bg-slate-800"
                             placeholder="Message :"></textarea>
                         </div>
                       </div>
@@ -259,6 +263,8 @@ const BlogDetails = () => {
                 </form>
               </div>
             </div>
+
+            {/* Producte details sidebar */}
 
             <div className="lg:w-1/3 md:w-1/2 md:p-4 px-3 mt-8 md:mt-0">
               <div className="sticky top-20">
@@ -280,11 +286,11 @@ const BlogDetails = () => {
                     </div>
 
                     <ul className="list-none mt-4">
-                      <li className="flex justify-between items-center">
-                        <span className="text-slate-400 text-sm">
+                      <li className="flex justify-start items-center">
+                        <span className="text-slate-400 w-1/2 text-sm">
                           Facilities
                         </span>
-                        <div>
+                        <div className="w-1/2 pl-8">
                           {facilities?.map((facility, index) => (
                             <span
                               className="text-slate-900 dark:text-slate-300 block font-medium text-sm"
@@ -295,16 +301,20 @@ const BlogDetails = () => {
                         </div>
                       </li>
 
-                      <li className="flex justify-between items-center mt-2">
-                        <span className="text-slate-400 text-sm">Location</span>
-                        <span className="font-medium text-sm">{location}</span>
+                      <li className="flex justify-start items-center mt-2">
+                        <span className="text-slate-400 text-sm w-1/2">
+                          Location
+                        </span>
+                        <span className="text-slate-900 dark:text-slate-300 block font-medium text-sm w-1/2 pl-8 ">
+                          {location}
+                        </span>
                       </li>
 
-                      <li className="flex justify-between items-center mt-2">
-                        <span className="text-slate-400 text-sm">
+                      <li className="flex justify-start items-center mt-2">
+                        <span className="text-slate-400 text-sm w-1/2">
                           Year of Construction
                         </span>
-                        <span className="font-medium text-sm">
+                        <span className="text-slate-900 dark:text-slate-300 block font-medium text-sm w-1/2 pl-8 ">
                           {year_built}
                         </span>
                       </li>
@@ -346,7 +356,7 @@ const BlogDetails = () => {
             </div>
           </div>
         </div>
-
+        {/* Leave a comment section for small devices */}
         <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-300 mx-2 md:hidden">
           <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
@@ -362,7 +372,7 @@ const BlogDetails = () => {
                     <input
                       type="text"
                       id="name"
-                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                     />
                   </div>
                 </div>
@@ -378,7 +388,7 @@ const BlogDetails = () => {
                     <input
                       type="email"
                       id="email"
-                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md"
+                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                     />
                   </div>
                 </div>
@@ -392,10 +402,10 @@ const BlogDetails = () => {
                     Your Comment:
                   </label>
                   <div className="form-icon relative mt-2">
-                    <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600" />
+                    <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600 mt-2" />
                     <textarea
                       id="comments"
-                      className="ps-11 h-28 w-full"
+                      className="ps-11 h-28 w-full dark:bg-slate-800 border-2 border-slate-200 rounded-md pt-2"
                       placeholder="Message :"></textarea>
                   </div>
                 </div>
