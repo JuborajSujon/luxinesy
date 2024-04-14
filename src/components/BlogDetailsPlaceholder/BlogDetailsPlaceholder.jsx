@@ -6,7 +6,7 @@ const BlogDetailsPlaceholder = () => {
       <div className="px-4">
         <div className="border border-blue-300 shadow rounded-md  p-4 w-full mx-auto">
           <div className="animate-pulse">
-            <div className="w-full h-[320px] grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="w-full h-[380px] grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="bg-slate-700 h-full rounded"></div>
               <div className=" h-full grid grid-cols-2 gap-3">
                 <div className="bg-slate-700 "></div>
@@ -25,8 +25,28 @@ const BlogDetailsPlaceholder = () => {
                 <div className="h-2 bg-slate-700 rounded"></div>
                 <div className="h-2 bg-slate-700 rounded"></div>
                 <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
               </div>
               <div className="space-y-3">
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 bg-slate-700 rounded"></div>
                 <div className="h-2 bg-slate-700 rounded"></div>
                 <div className="h-2 bg-slate-700 rounded"></div>
                 <div className="h-2 bg-slate-700 rounded"></div>
