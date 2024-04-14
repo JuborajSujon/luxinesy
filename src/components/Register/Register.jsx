@@ -5,7 +5,7 @@ import { BsEye, BsEyeSlash } from "react-icons/bs";
 import useAuth from "../../customHook/useAuth";
 const Register = () => {
   const [password, setPassword] = useState("");
-  const { createUser } = useAuth();
+  const { createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
 
   const {
@@ -20,13 +20,20 @@ const Register = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Register Handler for create user
+  // Register Handler for create user , update user profile
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { email, password, fullName, photoURL } = data;
     // Register Handler for create user
     createUser(email, password)
       .then((result) => {
         const user = result.user;
+        // update user profile
+        updateUserProfile(fullName, photoURL)
+          .then(() => {})
+          .catch((error) => {
+            console.log(error.message);
+          });
+
         if (user) {
           navigate("/");
         }
