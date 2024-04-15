@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
 
   // update user profile
   const updateUserProfile = (name, photo) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -39,6 +40,7 @@ const AuthProvider = ({ children }) => {
 
   // update email
   const updateUserEmail = (email) => {
+    setLoading(true);
     return updateEmail(auth.currentUser, email);
   };
 
@@ -68,18 +70,8 @@ const AuthProvider = ({ children }) => {
   // observer user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-        setLoading(false);
-        const loggedUser = {
-          email: currentUser.email,
-          name: currentUser.displayName,
-          photo: currentUser.photoURL,
-        };
-        localStorage.setItem("luxinesy-user", JSON.stringify(loggedUser));
-      } else {
-        localStorage.removeItem("luxinesy-user");
-      }
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
