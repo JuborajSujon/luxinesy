@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
+
 const HomeHeroSlider = () => {
   return (
     <Swiper
@@ -25,7 +26,7 @@ const HomeHeroSlider = () => {
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">
-                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6">
+                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6 ">
                   Easy way to find your <br /> dream property
                 </h1>
                 <p className="text-white/70 text-xl max-w-xl mx-auto">
@@ -51,7 +52,7 @@ const HomeHeroSlider = () => {
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">
-                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6">
+                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6 ">
                   We will help you find <br /> your Wonderful home
                 </h1>
                 <p className="text-white/70 text-xl max-w-xl mx-auto">
@@ -77,7 +78,7 @@ const HomeHeroSlider = () => {
           <div className="container mx-auto relative">
             <div className="grid grid-cols-1">
               <div className="text-center">
-                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6">
+                <h1 className="font-bold text-white lg:leading-normal leading-normal text-3xl sm:text-4xl lg:text-5xl mb-6 ">
                   Special offers or deals
                   <br /> Select properties
                 </h1>
