@@ -3,7 +3,10 @@ import { MdEmail } from "react-icons/md";
 
 const LeaveAComment = () => {
   return (
-    <div className="p-6 rounded-md shadow-md mt-16 border-2 bg-white mx-4">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      className="p-6 rounded-md shadow-md mt-16 border-2 bg-white mx-4">
       <h5 className="text-xl dark:text-slate-900 font-semibold">
         Leave A Comment:
       </h5>

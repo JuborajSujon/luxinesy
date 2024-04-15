@@ -34,12 +34,18 @@ const ProfileUpdateDetails = () => {
   return (
     <div className="py-8 sm:py-12 md:py-16 lg:py-20 relative">
       <div className="grid md:grid-cols-12 grid-cols-1 justify-between gap-3 px-4">
-        <div className="lg:col-span-7 md:col-span-6 ">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="lg:col-span-7 md:col-span-6 ">
           <img className="w-full" src={UpdateProfileImage} alt="" />
           <HaveQuestion />
         </div>
 
-        <div className="lg:col-span-5 md:col-span-6 ">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="lg:col-span-5 md:col-span-6 ">
           <div className=" space-y-12">
             <div className="bg-white border-2 rounded-md shadow-md p-6 space-y-3">
               <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-900">
