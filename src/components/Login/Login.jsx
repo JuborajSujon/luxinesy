@@ -8,6 +8,7 @@ import useAuth from "../../customHook/useAuth";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 import "animate.css";
+import ParticleBg from "../ParticleBg/ParticleBg";
 
 const Login = () => {
   const [password, setPassword] = useState("");
@@ -67,7 +68,9 @@ const Login = () => {
         <title>Luxninesy | Login</title>
       </Helmet>
       <section className="max-w-[1540px] mx-auto py-16 sm:pt-20 sm:pb-36 flex items-center relative overflow-hidden ">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2">
+          <ParticleBg />
+        </div>
         <div className="container mx-auto relative z-3 animate__animated animate__zoomIn">
           <div className="flex justify-center">
             <div className="max-w-[400px] w-full m-auto p-6 bg-white shadow-md rounded-md">
