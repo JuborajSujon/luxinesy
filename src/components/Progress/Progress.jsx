@@ -6,7 +6,10 @@ const Progress = () => {
         <div className="grid lg:grid-cols-12 grid-cols-1 md:text-start text-center justify-center">
           <div className="lg:col-start-2 lg:col-span-10">
             <div className="grid md:grid-cols-3 grid-cols-1 items-center gap-6">
-              <div className=" text-center">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className=" text-center">
                 <h1 className="text-white lg:text-gray-200xl text-4xl font-semibold mb-2">
                   <div
                     className="radial-progress text-green-500"
@@ -24,7 +27,10 @@ const Progress = () => {
                 </h5>
               </div>
 
-              <div className=" text-center">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                className=" text-center">
                 <h1 className="text-white lg:text-gray-200xl text-4xl font-semibold mb-2">
                   <div
                     className="radial-progress text-green-500"
@@ -42,7 +48,10 @@ const Progress = () => {
                 </h5>
               </div>
 
-              <div className=" text-center">
+              <div
+                data-aos="fade-left"
+                data-aos-duration="700"
+                className=" text-center">
                 <h1 className="text-white lg:text-gray-200xl text-4xl font-semibold mb-2">
                   <div
                     className="radial-progress text-green-500"

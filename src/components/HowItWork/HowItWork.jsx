@@ -12,7 +12,10 @@ const HowItWork = () => {
       />
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
-        <div className="lg:px-10 text-center">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="lg:px-10 text-center">
           <div className="bg-transparent text-green-500 ">
             <AiOutlineHome
               size={50}
@@ -30,7 +33,10 @@ const HowItWork = () => {
             </p>
           </div>
         </div>
-        <div className="lg:px-10 text-center">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="lg:px-10 text-center">
           <div className="bg-transparent text-green-500 ">
             <PiBagSimpleBold
               size={50}
@@ -48,7 +54,10 @@ const HowItWork = () => {
             </p>
           </div>
         </div>
-        <div className="lg:px-10 text-center">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="lg:px-10 text-center">
           <div className="bg-transparent text-green-500 ">
             <FiKey
               size={50}

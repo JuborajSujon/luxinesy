@@ -6,7 +6,10 @@ const Transparency = () => {
   return (
     <div className="container mx-auto px-4 relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
-        <div className="md:col-span-5">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="md:col-span-5">
           <div className="relative">
             <img
               src="https://i.ibb.co/XxtLDFF/effeciency.png"
@@ -26,7 +29,10 @@ const Transparency = () => {
           </div>
         </div>
 
-        <div className="md:col-span-7">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="md:col-span-7">
           <div className="lg:ms-4">
             <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-semibold dark:text-slate-200">
               Efficiency. Transparency. <br /> Control.

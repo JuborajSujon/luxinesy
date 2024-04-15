@@ -19,7 +19,10 @@ const ClientReview = () => {
         desctiption="These testimonials offer a glimpse into the real-world impact of our work, highlighting the quality of our services and the trust our clients place in us. Whether you're considering partnering with us or simply interested in learning more about our reputation and track record"
       />
 
-      <div className="flex justify-center relative mt-8">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="flex justify-center relative mt-8">
         <div className=" w-full">
           <Swiper
             modules={[Navigation, Autoplay]}

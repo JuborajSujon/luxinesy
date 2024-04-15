@@ -10,7 +10,10 @@ const TeamMember = () => {
         desctiption="Meet our dedicated team members who bring a wealth of expertise and passion to our organization. With diverse backgrounds and skills, our team is committed to delivering exceptional results and exceeding client expectations. "
       />
 
-      <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
         <div className="lg:col-span-3 md:col-span-6">
           <div className="group text-center">
             <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
