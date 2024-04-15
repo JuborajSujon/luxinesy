@@ -11,7 +11,7 @@ const ListingCategories = () => {
       <div className="grid  md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 mx-4 md:gap-[30px] gap-3">
         <div
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
@@ -31,7 +31,7 @@ const ListingCategories = () => {
 
         <div
           data-aos="zoom-in"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
@@ -51,7 +51,7 @@ const ListingCategories = () => {
 
         <div
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
@@ -71,7 +71,7 @@ const ListingCategories = () => {
 
         <div
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
@@ -91,7 +91,7 @@ const ListingCategories = () => {
 
         <div
           data-aos="zoom-in"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
@@ -110,7 +110,7 @@ const ListingCategories = () => {
         </div>
         <div
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="700"
           className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"

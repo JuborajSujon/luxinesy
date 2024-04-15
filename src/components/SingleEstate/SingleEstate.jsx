@@ -17,7 +17,10 @@ const SingleEstate = ({ estate }) => {
     bathrooms,
   } = estate;
   return (
-    <div className="group rounded-lg bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden  m-3 flex flex-col">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="700"
+      className="group rounded-lg bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden  m-3 flex flex-col">
       <div className="relative h-64">
         <img
           className="w-full h-full object-cover group-hover:scale-105 duration-300"
