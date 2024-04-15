@@ -47,8 +47,8 @@ const ProfileUpdateDetails = () => {
           data-aos-duration="1000"
           className="lg:col-span-5 md:col-span-6 ">
           <div className=" space-y-12">
-            <div className="bg-white border-2 rounded-md shadow-md p-6 space-y-3">
-              <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-900">
+            <div className="bg-white dark:bg-slate-900 rounded-md shadow-md p-6 space-y-3">
+              <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-400 text-slate-900 ">
                 My Profile
               </h3>
               <div className="">
@@ -59,22 +59,22 @@ const ProfileUpdateDetails = () => {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-medium dark:text-slate-900">
+                <h3 className="text-lg font-medium dark:text-slate-400 text-slate-900">
                   Name:{" "}
-                  <span className="font-normal dark:text-slate-900">
+                  <span className="font-normal dark:text-slate-400 text-slate-900">
                     {user?.displayName}
                   </span>
                 </h3>
-                <h3 className="text-lg font-medium dark:text-slate-900">
+                <h3 className="text-lg font-medium dark:text-slate-400 text-slate-900">
                   Email:{" "}
-                  <span className="font-normal dark:text-slate-900">
+                  <span className="font-normal dark:text-slate-400 text-slate-900">
                     {user?.email || "user email not found"}
                   </span>
                 </h3>
               </div>
             </div>
-            <div className="bg-white border-2 rounded-md shadow-md p-6">
-              <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-900">
+            <div className="bg-white dark:bg-slate-900  rounded-md shadow-md p-6">
+              <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-400 text-slate-900">
                 Update Profile
               </h3>
 
@@ -88,7 +88,7 @@ const ProfileUpdateDetails = () => {
                   <input
                     {...register("fullName", { required: true })}
                     type="text"
-                    className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                    className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-slate-400/40 dark:text-slate-400"
                     placeholder="Name"
                   />
                   {errors.fullName && (
@@ -109,7 +109,7 @@ const ProfileUpdateDetails = () => {
                       {...register("photoURL", { required: true })}
                       type="text"
                       id="subject"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-slate-400/40 dark:text-slate-400"
                       placeholder=" Photo URL"
                     />
                     {errors.email && (

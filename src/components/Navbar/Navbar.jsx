@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className="btn btn-ghost text-xl sm:text-2xl md:text-3xl lg:text-4xl italic font-bold  min-h-10 h-10 text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-900 hover:from-emerald-500 hover:to-yellow-700 -ml-2">
+          className="btn btn-ghost text-xl sm:text-2xl md:text-3xl lg:text-4xl italic font-bold  min-h-10 h-10 text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-900 hover:from-emerald-500 hover:to-yellow-700 -ml-2 ">
           LUXINESY
         </Link>
       </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
           {navList}
         </ul>
       </div>
-      <div className="navbar-end space-x-2">
+      <div className="navbar-end  space-x-2">
         {user ? (
           <div className="relative">
             <div className="flex items-center  gap-1 sm:gap-2">
