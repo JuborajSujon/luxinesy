@@ -7,6 +7,7 @@ import TeamMember from "../components/TeamMember/TeamMember";
 import ClientReview from "../components/ClientReview/ClientReview";
 import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   // ensure that the new page starts at the top when navigating
@@ -15,6 +16,9 @@ const AboutUs = () => {
   }, []);
   return (
     <Container>
+      <Helmet>
+        <title>Luxinesy | About Us</title>
+      </Helmet>
       <section
         className={`relative w-full py-20 md:py-28 lg:py-36 bg-[url('https://i.ibb.co/VqzMTDv/slider2.jpg')] bg-no-repeat bg-center bg-cover rounded-none`}>
         <div className="absolute inset-0 bg-black opacity-50"></div>

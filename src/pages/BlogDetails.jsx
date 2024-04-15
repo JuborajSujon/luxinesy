@@ -12,6 +12,7 @@ import { FiPhone } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import Container from "../components/Container/Container";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const BlogDetails = () => {
   const { newId } = useParams();
@@ -52,6 +53,11 @@ const BlogDetails = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>
+          Luxinesy | {estate_title ? estate_title : "estate title not found"}
+        </title>
+      </Helmet>
       <section className="relative md:pb-24 pb-16">
         <div className="container-fluid">
           <div className="md:flex mt-4  ">

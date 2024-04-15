@@ -34,8 +34,8 @@ const SingleEstate = ({ estate }) => {
 
       <div className="p-6 flex-grow  flex flex-col justify-between">
         <div className="pb-4">
-          <h3 className="text-lg hover:text-green-600 font-medium dark:text-slate-200 dark:hover:text-green-600">
-            {estate_title.slice(0, 29)}
+          <h3 className="text-xl hover:text-green-600 font-medium dark:text-slate-200 dark:hover:text-green-600">
+            {estate_title}
           </h3>
         </div>
         <div className="pb-4 flex items-center justify-between">

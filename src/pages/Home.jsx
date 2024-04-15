@@ -6,6 +6,7 @@ import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 import HomeHeroSlider from "../components/HomeHeroSlider/HomeHeroSlider";
 import ListingCategories from "../components/ListingCategories/ListingCategories";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const data = useLoaderData();
@@ -16,6 +17,9 @@ const Home = () => {
   }, []);
   return (
     <Container>
+      <Helmet>
+        <title>Luxinesy | Home</title>
+      </Helmet>
       <HomeHeroSlider />
       <ListingCategories />
       <EstatesProperty data={data} />
