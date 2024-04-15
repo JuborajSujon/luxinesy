@@ -4,6 +4,7 @@ import useAuth from "../../customHook/useAuth";
 import HaveQuestion from "../HaveQuestion/HaveQuestion";
 import LeaveAComment from "../LeaveAComment/LeaveAComment";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 const ProfileUpdateDetails = () => {
   const { user, updateUserProfile, reload, setReload } = useAuth();
 
@@ -20,9 +21,14 @@ const ProfileUpdateDetails = () => {
     updateUserProfile(fullName, photoURL)
       .then(() => {
         setReload(!reload);
+        toast.success("Profile Updated Successfully", {
+          autoClose: 1000,
+        });
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        toast.error("Profile Update Failed", {
+          autoClose: 1000,
+        });
       });
   };
   return (
@@ -67,44 +73,23 @@ const ProfileUpdateDetails = () => {
               </h3>
 
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="grid lg:grid-cols-12 lg:gap-6">
-                  <div className="lg:col-span-6 mb-5 flex flex-col gap-1">
-                    <label
-                      htmlFor="name"
-                      className="font-medium dark:text-slate-900">
-                      Your Name:
-                    </label>
-                    <input
-                      {...register("fullName", { required: true })}
-                      type="text"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
-                      placeholder="Name"
-                    />
-                    {errors.fullName && (
-                      <span className="text-red-500">
-                        Please enter a valid name
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="lg:col-span-6 mb-5 flex flex-col gap-1">
-                    <label
-                      htmlFor="email"
-                      className="font-medium dark:text-slate-900">
-                      Your Email:
-                    </label>
-                    <input
-                      {...register("email", { required: true })}
-                      type="email"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
-                      placeholder="Email"
-                    />
-                    {errors.email && (
-                      <span className="text-red-500">
-                        Please enter a valid email
-                      </span>
-                    )}
-                  </div>
+                <div className="grid grid-cols-1">
+                  <label
+                    htmlFor="name"
+                    className="font-medium dark:text-slate-900">
+                    Your Name:
+                  </label>
+                  <input
+                    {...register("fullName", { required: true })}
+                    type="text"
+                    className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                    placeholder="Name"
+                  />
+                  {errors.fullName && (
+                    <span className="text-red-500">
+                      Please enter a valid name
+                    </span>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1">

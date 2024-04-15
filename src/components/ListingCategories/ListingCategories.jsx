@@ -9,7 +9,10 @@ const ListingCategories = () => {
         desctiption="Experience luxury living at its finest with our exquisite selection of luxury estates, including penthouses, beachfront properties, resorts, private islands, villas, and mansions, showcasing unparalleled craftsmanship and exclusive amenities."
       />
       <div className="grid  md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 mx-4 md:gap-[30px] gap-3">
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/BPY7BXN/penthouse.jpg"
@@ -26,7 +29,10 @@ const ListingCategories = () => {
           </div>
         </div>
 
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/KKs3v4q/beachfront.webp"
@@ -43,7 +49,10 @@ const ListingCategories = () => {
           </div>
         </div>
 
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/5hSH8b0/resorts.webp"
@@ -60,7 +69,10 @@ const ListingCategories = () => {
           </div>
         </div>
 
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/MGntx96/private-Island.jpg"
@@ -77,7 +89,10 @@ const ListingCategories = () => {
           </div>
         </div>
 
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/sP93N4m/villas.webp"
@@ -93,7 +108,10 @@ const ListingCategories = () => {
             <p className="text-slate-400 text-sm mt-1">450 Listings</p>
           </div>
         </div>
-        <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 flex flex-col justify-between">
           <img
             className="grow"
             src="https://i.ibb.co/zZTDLdL/mansion.webp"
