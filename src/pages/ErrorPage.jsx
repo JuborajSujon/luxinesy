@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Container from "../components/Container/Container";
 import { Helmet } from "react-helmet";
+import "animate.css";
 
 const ErrorPage = () => {
   return (
@@ -16,7 +17,7 @@ const ErrorPage = () => {
                 <Link to={"/"}>
                   <img
                     src="https://i.ibb.co/0BGGzjz/Logo-Final-1.png"
-                    className="mx-auto w-20"
+                    className="mx-auto w-20 animate__animated animate__fadeIn animate__slideInDown"
                     alt=""
                   />
                 </Link>
@@ -24,10 +25,10 @@ const ErrorPage = () => {
               <div className=" text-center my-auto">
                 <img
                   src="https://i.ibb.co/SxMVZWM/error.png"
-                  className="mx-auto"
+                  className="mx-auto animate__animated animate__zoomIn"
                   alt=""
                 />
-                <h1 className="mt-3 mb-6 md:text-4xl text-3xl font-bold">
+                <h1 className="mt-3 mb-6 md:text-4xl text-3xl font-bold animate__animated animate__zoomIn">
                   Page Not Found?
                 </h1>
                 <p className="text-slate-400">
@@ -38,7 +39,7 @@ const ErrorPage = () => {
                 <div className="mt-4">
                   <Link
                     to={"/"}
-                    className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md">
+                    className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md animate__animated animate__slideInUp">
                     Back to Home
                   </Link>
                 </div>
