@@ -275,6 +275,7 @@ const ParticleSnowConfig = {
         mode: "delete",
         value: 0,
       },
+
       value: 1000,
     },
     opacity: {
