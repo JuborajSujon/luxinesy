@@ -8,7 +8,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white relative">
+    <footer
+      data-aos="zoom-in-down"
+      data-aos-duration="1000"
+      className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white relative">
       {/* Newsletter */}
       <div className="bg-white w-[80%] mx-auto p-6 border  rounded-md absolute -top-20 left-1/2 -translate-x-1/2 sm:flex flex-col items-center lg:flex-row lg:justify-between gap-3 lg:gap-6 hidden dark:bg-slate-900">
         <div className="text-center md:text-left">
