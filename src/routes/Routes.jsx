@@ -10,6 +10,7 @@ import BlogDetails from "../pages/BlogDetails";
 import Home from "../pages/Home";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import ParticleBg from "./../components/ParticleBg/ParticleBg";
 
 const router = createBrowserRouter([
   {
