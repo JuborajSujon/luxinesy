@@ -60,7 +60,10 @@ const BlogDetails = () => {
       </Helmet>
       <section className="relative md:pb-24 pb-16">
         <div className="container-fluid">
-          <div className="md:flex mt-4  ">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            className="md:flex mt-4  ">
             <div className="md:w-1/2 p-1">
               <div className="group relative overflow-hidden w-full h-full ">
                 <img
@@ -168,9 +171,17 @@ const BlogDetails = () => {
           <div className="md:flex">
             {/* Production Details left sidebar */}
             <div className="lg:w-2/3 md:w-1/2 md:p-4 px-3">
-              <h4 className="text-2xl font-medium">{estate_title}</h4>
+              <h4
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className="text-2xl font-medium">
+                {estate_title}
+              </h4>
 
-              <ul className="py-6 flex flex-wrap items-center list-none gap-2">
+              <ul
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className="py-6 flex flex-wrap items-center list-none gap-2">
                 <li className="flex items-center lg:me-6 ">
                   <FaCompressArrowsAlt className="lg:text-xl text-sm sm:text-lg me-2 text-green-600" />
                   <span className="lg:text-xl">{area}</span>
@@ -193,11 +204,19 @@ const BlogDetails = () => {
                 </li>
               </ul>
 
-              <p className="text-slate-400">{description}</p>
+              <p
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className="text-slate-400">
+                {description}
+              </p>
 
               {/* Google map */}
 
-              <div className="w-full leading-[0] border-0 mt-6">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className="w-full leading-[0] border-0 mt-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.698629884416!2d90.40235011155244!3d23.793743778551782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7163736e453%3A0xb12cfac638de13ed!2sProgramming%20Hero!5e0!3m2!1sen!2sbd!4v1712767993048!5m2!1sen!2sbd"
                   width="100%"
@@ -209,7 +228,10 @@ const BlogDetails = () => {
               </div>
               {/* Leave a comment: */}
 
-              <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-200 mx-2 hidden md:block">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="700"
+                className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-200 mx-2 hidden md:block">
                 <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
                 <form className="mt-8">
@@ -277,7 +299,10 @@ const BlogDetails = () => {
             {/* Producte details sidebar */}
 
             <div className="lg:w-1/3 md:w-1/2 md:p-4 px-3 mt-8 md:mt-0">
-              <div className="sticky top-20">
+              <div
+                data-aos="fade-left"
+                data-aos-duration="700"
+                className="sticky top-20">
                 <div className="rounded-md bg-slate-50 dark:bg-slate-800 shadow dark:shadow-gray-700">
                   <div className="p-6">
                     <div className="flex justify-between items-center">
@@ -349,7 +374,10 @@ const BlogDetails = () => {
                   </div>
                 </div>
 
-                <div className="mt-12 text-center">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="700"
+                  className="mt-12 text-center">
                   <h3 className="mb-6 text-xl leading-normal font-medium text-black dark:text-white">
                     Have Question ? Get in touch!
                   </h3>
@@ -367,7 +395,10 @@ const BlogDetails = () => {
           </div>
         </div>
         {/* Leave a comment section for small devices */}
-        <div className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-300 mx-2 md:hidden">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-300 mx-2 md:hidden">
           <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
           <form className="mt-8">
