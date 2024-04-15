@@ -1,6 +1,9 @@
 const GoogleMapContact = () => {
   return (
-    <div className="container-fluid mx-auto relative">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="700"
+      className="container-fluid mx-auto relative">
       <div className="grid grid-cols-1">
         <div className="w-full leading-[0] border-0">
           <iframe

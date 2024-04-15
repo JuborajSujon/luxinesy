@@ -4,7 +4,10 @@ const ContactDetails = () => {
   return (
     <div className="container mx-auto relative lg:mt-12 mt-6">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
-        <div className="text-center px-6">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          className="text-center px-6">
           <div className="relative overflow-hidden">
             <MdLocalPhone className="h-16 w-16 fill-green-600 mx-auto" />
           </div>
@@ -28,7 +31,10 @@ const ContactDetails = () => {
           </div>
         </div>
 
-        <div className="text-center px-6">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="700"
+          className="text-center px-6">
           <div className="relative overflow-hidden">
             <MdEmail className="h-16 w-16 fill-green-600 mx-auto" />
           </div>
@@ -52,7 +58,10 @@ const ContactDetails = () => {
           </div>
         </div>
 
-        <div className="text-center px-6">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="700"
+          className="text-center px-6">
           <div className="relative overflow-hidden">
             <MdLocationPin className="h-16 w-16 fill-green-600 mx-auto" />
           </div>

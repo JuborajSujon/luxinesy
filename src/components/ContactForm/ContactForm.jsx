@@ -3,11 +3,17 @@ const ContactForm = () => {
   return (
     <div className="container mx-auto relative">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-3">
-        <div className="lg:col-span-7 md:col-span-6">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="lg:col-span-7 md:col-span-6">
           <img src={ContactImg} alt="" />
         </div>
 
-        <div className="lg:col-span-5 md:col-span-6 px-4">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="lg:col-span-5 md:col-span-6 px-4">
           <div className="lg:me-5">
             <div className="bg-white rounded-md shadow p-6">
               <h3 className="mb-6 text-2xl leading-normal font-medium">
