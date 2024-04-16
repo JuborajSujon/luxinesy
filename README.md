@@ -2,7 +2,7 @@
 
 ### Live Site URL:
 
-Firebase Hosting : [Link](Placeholder)
+Firebase Hosting : [Link](https://luxinesy.web.app/)
 
 Netlify Hosting : [Link](Placeholder)
 
