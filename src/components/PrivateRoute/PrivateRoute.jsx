@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 import useAuth from "../../customHook/useAuth";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import BlogDetailsPlaceholder from "./../BlogDetailsPlaceholder/BlogDetailsPlaceholder";
+
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
+
   const location = useLocation();
-  const navigate = useNavigate();
 
   if (loading) {
-    navigate("/login");
     return <BlogDetailsPlaceholder />;
   }
 

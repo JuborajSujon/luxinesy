@@ -11,13 +11,15 @@ const ProfileUpdateDetails = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  useEffect(() => {}, [user, reload]);
+  useEffect(() => {}, [reload]);
 
   const onSubmit = (data) => {
     const { fullName, photoURL } = data;
+
     updateUserProfile(fullName, photoURL)
       .then(() => {
         setReload(!reload);
@@ -30,6 +32,7 @@ const ProfileUpdateDetails = () => {
           autoClose: 1000,
         });
       });
+    reset();
   };
   return (
     <div className="py-8 sm:py-12 md:py-16 lg:py-20 relative">
