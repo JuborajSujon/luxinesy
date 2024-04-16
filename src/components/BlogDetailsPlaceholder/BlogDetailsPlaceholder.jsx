@@ -1,8 +1,8 @@
-import Container from "../Container/Container";
+import ContainerBox from "../ContainerBox/ContainerBox";
 
 const BlogDetailsPlaceholder = () => {
   return (
-    <Container>
+    <ContainerBox>
       <div className="px-4">
         <div className="border border-blue-300 shadow rounded-md  p-4 w-full mx-auto">
           <div className="animate-pulse">
@@ -60,7 +60,7 @@ const BlogDetailsPlaceholder = () => {
           </div>
         </div>
       </div>
-    </Container>
+    </ContainerBox>
   );
 };
 

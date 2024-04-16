@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import ParticleSnowConfig from "../ParticleSnowConfig/ParticleSnowConfig";
-import Container from "../Container/Container";
+import ContainerBox from "../ContainerBox/ContainerBox";
 
 const ParticleBg = () => {
   const [init, setInit] = useState(false);
@@ -21,9 +21,9 @@ const ParticleBg = () => {
 
   if (init) {
     return (
-      <Container>
+      <ContainerBox>
         <Particles className="w-full  h-screen" options={options} />
-      </Container>
+      </ContainerBox>
     );
   }
 

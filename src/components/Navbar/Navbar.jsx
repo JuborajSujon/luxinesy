@@ -121,9 +121,6 @@ const Navbar = () => {
                 <li className="text-base font-medium">
                   Name : {user?.displayName || "user name not found"}
                 </li>
-                <li className="text-base font-medium">
-                  Email : {user?.email || "user email not found"}
-                </li>
               </ul>
             )}
           </div>

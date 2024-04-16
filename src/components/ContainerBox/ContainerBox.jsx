@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-const Container = ({ children }) => {
+const ContainerBox = ({ children }) => {
   return <div className="max-w-[1540px] mx-auto sm:pb-20">{children}</div>;
 };
 
-Container.propTypes = {
+ContainerBox.propTypes = {
   children: PropTypes.node,
 };
 
-export default Container;
+export default ContainerBox;
