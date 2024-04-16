@@ -5,7 +5,7 @@ import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 import HomeHeroSlider from "../components/HomeHeroSlider/HomeHeroSlider";
 import ListingCategories from "../components/ListingCategories/ListingCategories";
 import { useEffect } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const Home = () => {
@@ -16,18 +16,16 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <HelmetProvider>
-      <ContainerBox>
-        <Helmet>
-          <title>Luxinesy | Home</title>
-        </Helmet>
-        <HomeHeroSlider />
-        <ListingCategories />
-        <EstatesProperty data={data} />
-        <AnimatedNumber />
-        <HaveQuestion />
-      </ContainerBox>
-    </HelmetProvider>
+    <ContainerBox>
+      <Helmet>
+        <title>Luxinesy | Home</title>
+      </Helmet>
+      <HomeHeroSlider />
+      <ListingCategories />
+      <EstatesProperty data={data} />
+      <AnimatedNumber />
+      <HaveQuestion />
+    </ContainerBox>
   );
 };
 
