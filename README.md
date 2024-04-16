@@ -4,7 +4,7 @@
 
 Firebase Hosting : [Link](https://luxinesy.web.app/)
 
-Netlify Hosting : [Link](Placeholder)
+Netlify Hosting : [Link](https://luxinesy.netlify.app/)
 
 ## Features and Characteristics:
 
