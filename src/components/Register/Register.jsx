@@ -170,11 +170,7 @@ const Register = () => {
                         className="w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900 py-2 mt-3"
                         placeholder="Enter Your Password"
                       />
-                      {errors.password && (
-                        <span className="text-red-500">
-                          Please enter a valid password
-                        </span>
-                      )}
+
                       <div className="absolute mt-2 top-1/2 -translate-y-1/2 right-2">
                         {password ? (
                           <BsEyeSlash
@@ -189,6 +185,11 @@ const Register = () => {
                         )}
                       </div>
                     </div>
+                    {errors.password && (
+                      <span className="text-red-500">
+                        Please enter a valid password
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex items-center mb-4">

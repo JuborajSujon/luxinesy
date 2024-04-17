@@ -119,11 +119,6 @@ const Login = () => {
                         placeholder="Enter Your Password"
                       />
 
-                      {errors.password && (
-                        <p className="text-red-500">
-                          Please enter a valid password
-                        </p>
-                      )}
                       <div className="absolute top-1/2 -translate-y-1/2 right-3 mt-1">
                         {password ? (
                           <BsEyeSlash
@@ -138,6 +133,11 @@ const Login = () => {
                         )}
                       </div>
                     </div>
+                    {errors.password && (
+                      <p className="text-red-500">
+                        Please enter a valid password
+                      </p>
+                    )}
                   </div>
 
                   <div className="flex justify-between mb-4">
