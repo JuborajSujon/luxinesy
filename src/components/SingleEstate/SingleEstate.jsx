@@ -70,7 +70,9 @@ const SingleEstate = ({ estate }) => {
         <ul className="pt-6 flex justify-between items-center list-none">
           <li>
             <span className="text-slate-400 dark:text-slate-300">Price</span>
-            <p className="text-lg dark:text-slate-300 font-medium">{price}</p>
+            <p className="text-lg dark:text-slate-300 font-medium">
+              {price} {status === "rent" ? "/ Week" : ""}
+            </p>
           </li>
 
           <li>

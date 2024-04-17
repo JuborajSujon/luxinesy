@@ -312,7 +312,10 @@ const BlogDetails = () => {
                     </div>
 
                     <div className="flex justify-between items-center mt-4">
-                      <span className="text-xl font-medium"> {price}</span>
+                      <span className="text-xl font-medium">
+                        {" "}
+                        {price} {status === "rent" ? "/ Week" : ""}
+                      </span>
 
                       <span className="bg-green-600/10 text-green-600 text-sm px-2.5 py-0.75 rounded h-6">
                         For {status}
