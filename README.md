@@ -2,9 +2,9 @@
 
 ### Live Site URL:
 
-Firebase Hosting : [Link](https://luxinesy.web.app/)
+Firebase Hosting : [https://luxinesy.web.app/](https://luxinesy.web.app/)
 
-Netlify Hosting : [Link](https://luxinesy.netlify.app/)
+Netlify Hosting : [https://luxinesy.netlify.app/](https://luxinesy.netlify.app/)
 
 ## Features and Characteristics:
 
@@ -62,3 +62,48 @@ Netlify Hosting : [Link](https://luxinesy.netlify.app/)
 
 - **Challenge:** Implementing prop type validation for React components posed challenges in ensuring correct data types and required props were passed, especially in larger component hierarchies.
 - **Solution:** Regularly reviewing prop types, utilizing PropTypes library documentation, and incorporating PropTypes into component development workflow helped identify and resolve issues early in the development process.
+
+## Installation: :computer:
+
+1. Clone the repository from GitHub:
+
+```
+git clone https://github.com/programming-hero-web-course-4/b9a9-real-estate-JuborajSujon
+```
+
+2. Navigate to the project directory:
+
+```
+cd book-vibe
+```
+
+3. Install dependencies using npm or yarn:
+
+```
+npm install
+```
+
+or
+
+```
+yarn install
+```
+
+## Usage: :book:
+
+1. Start the development server:
+
+```
+npm run dev
+```
+
+2. Open your web browser and visit http://localhost:5173 to access the application.
+
+## Additional Notes:
+
+- Ensure that you have Node.js and npm (or yarn) installed on your system before proceeding with the installation.
+- Luxinesy requires an active internet connection to fetch product data and provide personalized recommendations.
+- Customize the application as needed by modifying the source code files located in the project directory.
+- For production deployment, build the project using `npm run build` or yarn build and deploy the generated build files to your hosting server.
+
+Enjoy exploring and discovering your favorite books with BookVibe! :rocket:::rocket:::rocket:
