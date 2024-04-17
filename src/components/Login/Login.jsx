@@ -67,7 +67,7 @@ const Login = () => {
       <Helmet>
         <title>Luxninesy | Login</title>
       </Helmet>
-      <section className="max-w-[1540px] mx-auto py-16 sm:pt-20 sm:pb-36 flex items-center relative overflow-hidden ">
+      <section className="py-20 sm:pt-20 sm:pb-36 flex items-center relative overflow-hidden ">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-2">
           <ParticleBg />
         </div>

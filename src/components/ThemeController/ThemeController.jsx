@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import ContainerBox from "./../ContainerBox/ContainerBox";
 
 const ThemeController = () => {
   const [theme, setTheme] = useState("light");
@@ -19,7 +18,7 @@ const ThemeController = () => {
   };
 
   return (
-    <ContainerBox>
+    <>
       <div className="fixed top-1/4  z-50">
         <span className="relative inline-block rotate-90">
           <label className="cursor-pointer grid place-items-center">
@@ -40,7 +39,7 @@ const ThemeController = () => {
           </label>
         </span>
       </div>
-    </ContainerBox>
+    </>
   );
 };
 

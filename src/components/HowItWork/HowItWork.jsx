@@ -5,7 +5,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const HowItWork = () => {
   return (
-    <div className="container mx-auto px-4 relative lg:mt-24 mt-16">
+    <div className=" px-4 relative lg:mt-24 mt-16">
       <SectionTitle
         title="How It Works"
         desctiption="A great plateform to buy, sell and rent your properties without any agent or commisions."
@@ -15,7 +15,7 @@ const HowItWork = () => {
         <div
           data-aos="fade-right"
           data-aos-duration="1000"
-          className="lg:px-10 text-center">
+          className="p-10 rounded-md text-center shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
           <div className="bg-transparent text-green-500 ">
             <AiOutlineHome
               size={50}
@@ -36,7 +36,7 @@ const HowItWork = () => {
         <div
           data-aos="zoom-in"
           data-aos-duration="1000"
-          className="lg:px-10 text-center">
+          className="p-10 rounded-md text-center shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
           <div className="bg-transparent text-green-500 ">
             <PiBagSimpleBold
               size={50}
@@ -57,7 +57,7 @@ const HowItWork = () => {
         <div
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="lg:px-10 text-center">
+          className="p-10 rounded-md text-center shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
           <div className="bg-transparent text-green-500 ">
             <FiKey
               size={50}

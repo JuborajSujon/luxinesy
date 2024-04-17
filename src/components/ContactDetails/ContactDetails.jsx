@@ -2,7 +2,7 @@ import { MdLocationPin, MdEmail, MdLocalPhone } from "react-icons/md";
 
 const ContactDetails = () => {
   return (
-    <div className=" lg:mt-12 mt-6">
+    <div className=" lg:mt-16 mt-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
         <div
           data-aos="fade-right"

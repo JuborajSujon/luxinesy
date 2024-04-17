@@ -1,10 +1,10 @@
 import { BsArrowRight } from "react-icons/bs";
 import Qna from "./../Qna/Qna";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../ContainerBox/ContainerBox";
+
 const Terms = () => {
   return (
-    <ContainerBox>
+    <>
       <Helmet>
         <title>Luxninesy | Terms & Services</title>
       </Helmet>
@@ -167,7 +167,7 @@ const Terms = () => {
           </div>
         </div>
       </section>
-    </ContainerBox>
+    </>
   );
 };
 

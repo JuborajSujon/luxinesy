@@ -21,9 +21,9 @@ const ParticleBg = () => {
 
   if (init) {
     return (
-      <ContainerBox>
+      <>
         <Particles className="w-full  h-screen" options={options} />
-      </ContainerBox>
+      </>
     );
   }
 

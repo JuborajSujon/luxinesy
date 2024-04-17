@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import ProfileUpdateDetails from "../components/ProfileUpdateDetails/ProfileUpdateDetails";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const UpdateProfile = () => {
   // ensure that the new page starts at the top when navigating
@@ -9,7 +8,7 @@ const UpdateProfile = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <ContainerBox>
+    <>
       <Helmet>
         <title>Luxninesy | Update Profile</title>
       </Helmet>
@@ -29,7 +28,7 @@ const UpdateProfile = () => {
         </section>
         <ProfileUpdateDetails />
       </div>
-    </ContainerBox>
+    </>
   );
 };
 

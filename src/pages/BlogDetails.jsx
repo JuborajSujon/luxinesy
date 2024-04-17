@@ -12,7 +12,6 @@ import { FiPhone } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const BlogDetails = () => {
   const { newId } = useParams();
@@ -52,7 +51,7 @@ const BlogDetails = () => {
   } = estate;
 
   return (
-    <ContainerBox>
+    <>
       <Helmet>
         <title>
           Luxinesy | {estate_title ? estate_title : "estate title not found"}
@@ -460,7 +459,7 @@ const BlogDetails = () => {
           </form>
         </div>
       </section>
-    </ContainerBox>
+    </>
   );
 };
 

@@ -6,7 +6,6 @@ import ClientReview from "../components/ClientReview/ClientReview";
 import HaveQuestion from "../components/HaveQuestion/HaveQuestion";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const AboutUs = () => {
   // ensure that the new page starts at the top when navigating
@@ -14,7 +13,7 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <ContainerBox>
+    <div className="pb-20">
       <Helmet>
         <title>Luxinesy | About Us</title>
       </Helmet>
@@ -52,7 +51,7 @@ const AboutUs = () => {
         {/* Have Question ? Get in Touch */}
         <HaveQuestion />
       </section>
-    </ContainerBox>
+    </div>
   );
 };
 

@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "animate.css";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const ErrorPage = () => {
   return (
-    <ContainerBox>
+    <>
       <Helmet>
         <title>Luxinesy | Page Not Found</title>
       </Helmet>
@@ -61,7 +60,7 @@ const ErrorPage = () => {
           </div>
         </div>
       </section>
-    </ContainerBox>
+    </>
   );
 };
 

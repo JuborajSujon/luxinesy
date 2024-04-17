@@ -35,8 +35,8 @@ const ProfileUpdateDetails = () => {
     reset();
   };
   return (
-    <div className="py-8 sm:py-12 md:py-16 lg:py-20 relative">
-      <div className="grid md:grid-cols-12 grid-cols-1 justify-between gap-3 px-4">
+    <div className="py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="grid md:grid-cols-12 grid-cols-1 justify-between gap-3 px-4 ">
         <div
           data-aos="fade-right"
           data-aos-duration="1000"
@@ -50,7 +50,7 @@ const ProfileUpdateDetails = () => {
           data-aos-duration="1000"
           className="lg:col-span-5 md:col-span-6 ">
           <div className=" space-y-12">
-            <div className="bg-white dark:bg-slate-900 rounded-md shadow-md p-6 space-y-3">
+            <div className="bg-white dark:bg-slate-900 rounded-md shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 p-6 space-y-3">
               <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-400 text-slate-900 ">
                 My Profile
               </h3>
@@ -76,7 +76,7 @@ const ProfileUpdateDetails = () => {
                 </h3>
               </div>
             </div>
-            <div className="bg-white dark:bg-slate-900  rounded-md shadow-md p-6">
+            <div className="bg-white dark:bg-slate-900  rounded-md shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 p-6">
               <h3 className="mb-6 text-2xl leading-normal font-medium dark:text-slate-400 text-slate-900">
                 Update Profile
               </h3>

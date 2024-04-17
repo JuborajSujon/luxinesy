@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 
 const ClientReview = () => {
   return (
-    <div className="container mx-auto relative lg:mt-24 mt-16">
+    <div className="relative lg:mt-24 mt-16 px-4">
       <SectionTitle
         title="What Our Client Say ?"
         desctiption="These testimonials offer a glimpse into the real-world impact of our work, highlighting the quality of our services and the trust our clients place in us. Whether you're considering partnering with us or simply interested in learning more about our reputation and track record"
@@ -42,7 +42,7 @@ const ClientReview = () => {
                 slidesPerView: 2,
               },
 
-              1540: {
+              1024: {
                 width: 1540,
                 slidesPerView: 3,
               },

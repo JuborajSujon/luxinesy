@@ -6,8 +6,8 @@ const LeaveAComment = () => {
     <div
       data-aos="zoom-in"
       data-aos-duration="1000"
-      className="p-6 rounded-md shadow-md mt-16  bg-white dark:bg-slate-900 mx-4">
-      <h5 className="text-xl dark:text-slate-400 text-slate-900 font-semibold">
+      className="p-6 rounded-md  mt-16 bg-white dark:bg-slate-900 mx-4 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
+      <h5 className="text-xl dark:text-slate-400 text-slate-900 font-semibold ">
         Leave A Comment:
       </h5>
 

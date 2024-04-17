@@ -6,7 +6,6 @@ import HomeHeroSlider from "../components/HomeHeroSlider/HomeHeroSlider";
 import ListingCategories from "../components/ListingCategories/ListingCategories";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const Home = () => {
   const data = useLoaderData();
@@ -16,7 +15,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <ContainerBox>
+    <div className="pb-20">
       <Helmet>
         <title>Luxinesy | Home</title>
       </Helmet>
@@ -25,7 +24,7 @@ const Home = () => {
       <EstatesProperty data={data} />
       <AnimatedNumber />
       <HaveQuestion />
-    </ContainerBox>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 const Qna = () => {
   return (
     <div className="space-y-2 mt-3">
-      <div className="collapse collapse-arrow border shadow-sm rounded-md">
+      <div className="collapse collapse-arrow border dark:border-slate-500 dark:drop-shadow-lg shadow-sm rounded-md">
         <input type="radio" name="my-accordion-2" defaultChecked />
         <div className="collapse-title text-xl font-medium text-green-500">
           How does it work ?
@@ -14,7 +14,7 @@ const Qna = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border shadow-sm rounded-md">
+      <div className="collapse collapse-arrow border dark:border-slate-500 dark:drop-shadow-lg shadow-sm rounded-md">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium text-green-500">
           Do I need a designer to use Luxinesy ?
@@ -28,7 +28,7 @@ const Qna = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-arrow border shadow-sm rounded-md">
+      <div className="collapse collapse-arrow border dark:border-slate-500 dark:drop-shadow-lg shadow-sm rounded-md">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium text-green-500">
           What happens when I receive an order ?

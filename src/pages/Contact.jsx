@@ -3,7 +3,6 @@ import ContactDetails from "../components/ContactDetails/ContactDetails";
 import ContactForm from "../components/ContactForm/ContactForm";
 import GoogleMapContact from "../components/GoogleMapContact/GoogleMapContact";
 import { Helmet } from "react-helmet-async";
-import ContainerBox from "../components/ContainerBox/ContainerBox";
 
 const Contact = () => {
   // ensure that the new page starts at the top when navigating
@@ -11,7 +10,7 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <ContainerBox>
+    <div className="pb-20">
       <Helmet>
         <title>Luxinesy | Contact</title>
       </Helmet>
@@ -20,7 +19,7 @@ const Contact = () => {
         <ContactForm />
         <ContactDetails />
       </section>
-    </ContainerBox>
+    </div>
   );
 };
 

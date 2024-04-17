@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
 const TeamMember = () => {
   return (
-    <div className="container mx-auto px-4 relative">
+    <div className="px-4 ">
       <SectionTitle
         title="Team Meet The Agent Team"
         desctiption="Meet our dedicated team members who bring a wealth of expertise and passion to our organization. With diverse backgrounds and skills, our team is committed to delivering exceptional results and exceeding client expectations. "

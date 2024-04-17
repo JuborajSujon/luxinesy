@@ -6,7 +6,7 @@ const HaveQuestion = () => {
     <div
       data-aos="zoom-in"
       data-aos-duration="700"
-      className="container mx-auto px-4 relative lg:mt-24 mt-16 mb-16">
+      className=" px-4 relative lg:mt-24 mt-16 mb-16">
       <div className="grid grid-cols-1 text-center">
         <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-slate-300">
           Have Question ? Get in touch!

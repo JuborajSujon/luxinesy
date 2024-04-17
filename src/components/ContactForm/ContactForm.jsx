@@ -1,7 +1,7 @@
 import ContactImg from "../../assets/contact.svg";
 const ContactForm = () => {
   return (
-    <div className="container mx-auto relative">
+    <div className="">
       <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-3">
         <div
           data-aos="fade-right"
@@ -15,7 +15,7 @@ const ContactForm = () => {
           data-aos-duration="1000"
           className="lg:col-span-5 md:col-span-6 px-4">
           <div className="lg:me-5">
-            <div className="bg-white rounded-md shadow p-6">
+            <div className="bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 rounded-md p-6">
               <h3 className="mb-6 text-2xl leading-normal font-medium">
                 Get in touch !
               </h3>
@@ -30,7 +30,7 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                      className="mt-2 w-full border-2 border-slate-100 dark:border-slate-600 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-400"
                       placeholder="Name"
                     />
                   </div>
@@ -41,7 +41,7 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="email"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                      className="mt-2 w-full border-2 border-slate-100 dark:border-slate-600 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-400"
                       placeholder="Email"
                     />
                   </div>
@@ -55,7 +55,7 @@ const ContactForm = () => {
                     <input
                       name="subject"
                       id="subject"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                      className="mt-2 w-full border-2 border-slate-100 dark:border-slate-600 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-400"
                       placeholder="Subject :"
                     />
                   </div>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                       name="comments"
                       id="comments"
                       rows="4"
-                      className="mt-2 w-full border-2 border-slate-100 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-900"
+                      className="mt-2 w-full border-2 border-slate-100 dark:border-slate-600 p-1 rounded-md dark:bg-transparent dark:border-black/40 dark:text-slate-400"
                       placeholder="Message :"></textarea>
                   </div>
                 </div>

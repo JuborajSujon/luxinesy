@@ -11,9 +11,9 @@ const Footer = () => {
     <footer
       data-aos="zoom-in-down"
       data-aos-duration="1000"
-      className="max-w-[1540px] mx-auto p-10 bg-[#0F172A] text-white relative">
+      className="w-full p-10 bg-[#0F172A] text-white relative">
       {/* Newsletter */}
-      <div className="bg-white w-[80%] mx-auto p-6 border  rounded-md absolute -top-20 left-1/2 -translate-x-1/2 sm:flex flex-col items-center lg:flex-row lg:justify-between gap-3 lg:gap-6 hidden dark:bg-slate-900">
+      <div className="bg-white w-[80%] mx-auto p-6 border  rounded-md absolute -top-20 left-1/2 -translate-x-1/2 sm:flex flex-col items-center lg:flex-row lg:justify-between gap-3 lg:gap-6 hidden dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 dark:border-slate-500">
         <div className="text-center md:text-left">
           <h3 className="md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-slate-900 dark:text-slate-300">
             Subscribe to Newsletter!
