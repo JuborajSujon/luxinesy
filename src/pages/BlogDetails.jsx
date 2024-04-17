@@ -51,7 +51,7 @@ const BlogDetails = () => {
   } = estate;
 
   return (
-    <>
+    <div className="pb-20">
       <Helmet>
         <title>
           Luxinesy | {estate_title ? estate_title : "estate title not found"}
@@ -230,7 +230,7 @@ const BlogDetails = () => {
               <div
                 data-aos="fade-right"
                 data-aos-duration="700"
-                className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-200 mx-2 hidden md:block">
+                className="p-6 rounded-md mt-16 border-2 border-slate-200 dark:border-slate-500 mx-2 hidden md:block shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
                 <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
                 <form className="mt-8">
@@ -245,7 +245,7 @@ const BlogDetails = () => {
                           <input
                             type="text"
                             id="name"
-                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
+                            className="border-2 border-slate-200 dark:border-slate-500 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                           />
                         </div>
                       </div>
@@ -261,7 +261,7 @@ const BlogDetails = () => {
                           <input
                             type="email"
                             id="email"
-                            className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
+                            className="border-2 border-slate-200 dark:border-slate-500 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                           />
                         </div>
                       </div>
@@ -278,7 +278,7 @@ const BlogDetails = () => {
                           <FaComments className="w-5 h-5 absolute top-2 start-4 text-green-600" />
                           <textarea
                             id="comments"
-                            className="ps-11 h-28 w-full border-2 border-slate-200 rounded-md py-2 dark:bg-slate-800"
+                            className="ps-11 h-28 w-full border-2 border-slate-200 dark:border-slate-500 rounded-md py-2 dark:bg-slate-800"
                             placeholder="Message :"></textarea>
                         </div>
                       </div>
@@ -397,7 +397,7 @@ const BlogDetails = () => {
         <div
           data-aos="zoom-in"
           data-aos-duration="1000"
-          className="p-6 rounded-md shadow-md mt-16 border-2 border-slate-300 mx-2 md:hidden">
+          className="p-6 rounded-md shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 mt-16 border-2 border-slate-300 dark:border-slate-500 mx-2 md:hidden">
           <h5 className="text-xl font-semibold">Leave A Comment:</h5>
 
           <form className="mt-8">
@@ -412,7 +412,7 @@ const BlogDetails = () => {
                     <input
                       type="text"
                       id="name"
-                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
+                      className="border-2 border-slate-200 dark:border-slate-500 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                     />
                   </div>
                 </div>
@@ -428,7 +428,7 @@ const BlogDetails = () => {
                     <input
                       type="email"
                       id="email"
-                      className="border-2 border-slate-200 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
+                      className="border-2 border-slate-200 dark:border-slate-500 ps-11 w-full py-2 rounded-md dark:bg-slate-800"
                     />
                   </div>
                 </div>
@@ -445,7 +445,7 @@ const BlogDetails = () => {
                     <FaComments className="w-5 h-5 absolute top-0 start-4 text-green-600 mt-2" />
                     <textarea
                       id="comments"
-                      className="ps-11 h-28 w-full dark:bg-slate-800 border-2 border-slate-200 rounded-md pt-2"
+                      className="ps-11 h-28 w-full dark:bg-slate-800 border-2 dark:border-slate-500 border-slate-200 rounded-md pt-2"
                       placeholder="Message :"></textarea>
                   </div>
                 </div>
@@ -459,7 +459,7 @@ const BlogDetails = () => {
           </form>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
