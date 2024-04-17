@@ -166,7 +166,7 @@ const BlogDetails = () => {
           </div>
         </div>
 
-        <div className=" lg:mt-24 md:mt-16 mt-8">
+        <div className=" lg:mt-24 md:mt-16 mt-8 ">
           <div className="md:flex">
             {/* Production Details left sidebar */}
             <div className="lg:w-2/3 md:w-1/2 md:p-4 px-3">

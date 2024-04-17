@@ -3,7 +3,7 @@ import ContainerBox from "../ContainerBox/ContainerBox";
 const BlogDetailsPlaceholder = () => {
   return (
     <ContainerBox>
-      <div className="px-4">
+      <div className="px-4 pb-20">
         <div className="border border-blue-300 shadow rounded-md  p-4 w-full mx-auto">
           <div className="animate-pulse">
             <div className="w-full h-[380px] grid grid-cols-1 md:grid-cols-2 gap-3">
