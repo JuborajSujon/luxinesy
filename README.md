@@ -17,6 +17,18 @@ Netlify Hosting : [https://luxinesy.netlify.app/](https://luxinesy.netlify.app/)
 - **User-friendly Interface**: Our website is designed with a modern and intuitive user interface, ensuring a smooth and intuitive experience for all users.
 
 
+## Used Technology
+- **Frontend Development** : React, React DOM, React Router DOM, React Hook Form, React Icons, React Helmet Async, React Toastify, Lottie React
+
+- **User Authentication & Security** : Firebase
+
+- **UI Components & Styling** : Tailwind CSS, DaisyUI
+
+- **Development Tools** : Vite, ESLint, ESLint Plugins, PostCSS, Autoprefixer
+
+- **Additional Libraries** : Swiper, react-countup, tsparticles, animate.css, aos
+
+
 ## Installation: :computer:
 
 1. Clone the repository from GitHub:
